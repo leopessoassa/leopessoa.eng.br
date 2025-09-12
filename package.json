@@ -1,0 +1,42 @@
+{
+  "name": "leopessoa-eng",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@react-router/node": "^7.5.3",
+    "@react-router/serve": "^7.5.3",
+    "@vercel/react-router": "^1.1.2",
+    "isbot": "^5.1.27",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-gtm-module": "^2.0.11",
+    "react-hook-form": "^7.59.0",
+    "react-router": "^7.5.3"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.5.3",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/react-gtm-module": "^2.0.4",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "^0.25.5",
+    "@rollup/rollup-linux-x64-gnu": "^4.44.2",
+    "@tailwindcss/oxide-linux-x64-gnu": "^4.1.11",
+    "lightningcss-linux-x64-gnu": "^1.30.1"
+  }
+}
