@@ -137,7 +137,8 @@ export default function SobreLeoSection() {
                     Vamos conversar
                   </a>
                   <a 
-                    href="tel:+5583982078702" 
+                    href="https://wa.me/+5583982078702" 
+                    target="_blank"
                     className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
                   >
                     (83) 9 8207-8702

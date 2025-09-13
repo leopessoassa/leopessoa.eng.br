@@ -135,7 +135,8 @@ export default function ComoFuncionaSection() {
                 Vamos começar uma parceria
               </a>
               <a 
-                href="tel:+5583982078702"
+                href="https://wa.me/+5583982078702"
+                target="_blank"
                 className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
               >
                 WhatsApp: (83) 9 8207-8702

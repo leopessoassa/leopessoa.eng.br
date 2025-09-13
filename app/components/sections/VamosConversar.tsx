@@ -40,7 +40,10 @@ export default function VamosConversar() {
   };
 
   return (
-    <section id="contato" className="py-16 lg:py-24 bg-primary-900 text-white relative overflow-hidden">
+    <section id="contato" className="py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/images/xicara-cafe-na-areia-da-praia-v2.webp)'}}>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-slate-900/75"></div>
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -166,7 +169,8 @@ export default function VamosConversar() {
                 
                 <div className="space-y-4">
                   <a 
-                    href="tel:+5583982078702" 
+                    href="https://wa.me/+5583982078702" 
+                    target="_blank"
                     className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
                   >
                     <div className="w-12 h-12 bg-success-500 rounded-lg flex items-center justify-center">
