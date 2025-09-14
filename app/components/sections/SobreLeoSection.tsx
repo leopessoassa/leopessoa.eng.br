@@ -20,8 +20,12 @@ export default function SobreLeoSection() {
             
             {/* Foto e Info Básica */}
             <div className="text-center lg:text-left">
-              <div className="bg-secondary-100 w-80 h-80 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-8 shadow-elegant">
-                <span className="text-secondary-500 text-lg">Foto do Leo Pessoa</span>
+              <div className="w-80 h-96 rounded-2xl overflow-hidden mx-auto lg:mx-0 mb-8 shadow-elegant">
+                <img 
+                  src="/images/leonardo-pessoa.webp" 
+                  alt="Leonardo Pessoa - Engenheiro Eletricista" 
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
               
               <div className="bg-primary-50 rounded-xl p-6">
@@ -59,6 +63,22 @@ export default function SobreLeoSection() {
                     </div>
                   </div>
                   
+                  <div className="flex items-start gap-4 p-4 bg-primary-50 rounded-lg">
+                    <span className="text-primary-600 text-2xl">⚡</span>
+                    <div>
+                      <h4 className="font-semibold text-secondary-800">Pós-graduação Instalações Elétricas</h4>
+                      <p className="text-secondary-600">Residenciais e Comerciais</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-success-50 rounded-lg">
+                    <span className="text-success-600 text-2xl">🏠</span>
+                    <div>
+                      <h4 className="font-semibold text-secondary-800">Especialista Automação Residencial</h4>
+                      <p className="text-secondary-600">Soluções inteligentes e integradas</p>
+                    </div>
+                  </div>
+                  
                   <div className="flex items-start gap-4 p-4 bg-success-50 rounded-lg">
                     <span className="text-success-600 text-2xl">💻</span>
                     <div>
@@ -71,7 +91,7 @@ export default function SobreLeoSection() {
                     <span className="text-secondary-600 text-2xl">🏢</span>
                     <div>
                       <h4 className="font-semibold text-secondary-800">Desenvolvedor Full Stack</h4>
-                      <p className="text-secondary-600">Empresa pública federal - Visão de processos</p>
+                      <p className="text-secondary-600">Visão de processos</p>
                     </div>
                   </div>
                 </div>
