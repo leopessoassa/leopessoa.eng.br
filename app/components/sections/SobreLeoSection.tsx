@@ -1,3 +1,5 @@
+import { handlerCallWhatsapp } from "~/utils/handlersUtils";
+
 export default function SobreLeoSection() {
   return (
     <section className="py-16 lg:py-24 bg-white">
@@ -100,14 +102,17 @@ export default function SobreLeoSection() {
           </div>
 
           {/* Diferencial Pessoal */}
-          <div className="bg-secondary-50 rounded-2xl p-8 lg:p-12">
-            <div className="text-center mb-8">
+          <div className="bg-cover bg-center bg-no-repeat rounded-2xl p-8 lg:p-12 relative overflow-hidden" style={{backgroundImage: 'url(/images/equipamentos-eletricos-sobre-projeto-v2.webp)'}}>
+            {/* Background Overlay */}
+            <div className="absolute inset-0 bg-white/90 rounded-2xl"></div>
+            
+            <div className="text-center mb-8 relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-secondary-900 mb-4">
                 🤝 Por que arquitetos escolhem trabalhar comigo
               </h3>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 relative z-10">
               <div className="text-center">
                 <div className="bg-primary-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">💡</span>
@@ -157,11 +162,10 @@ export default function SobreLeoSection() {
                     Vamos conversar
                   </a>
                   <a 
-                    href="https://wa.me/+5583982078702" 
-                    target="_blank"
+                    onClick={() => handlerCallWhatsapp()}
                     className="border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
                   >
-                    (83) 9 8207-8702
+                    WhatsApp
                   </a>
                 </div>
               </div>

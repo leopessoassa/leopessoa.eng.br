@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { trackEvent } from "../Analytics";
+import { handlerCallWhatsapp } from "~/utils/handlersUtils";
 
 export default function VamosConversar() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -169,8 +170,7 @@ export default function VamosConversar() {
                 
                 <div className="space-y-4">
                   <a 
-                    href="https://wa.me/+5583982078702" 
-                    target="_blank"
+                    onClick={() => handlerCallWhatsapp()}
                     className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
                   >
                     <div className="w-12 h-12 bg-success-500 rounded-lg flex items-center justify-center">
@@ -178,7 +178,6 @@ export default function VamosConversar() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-white">WhatsApp</h4>
-                      <p className="text-white/80">(83) 9 8207-8702</p>
                     </div>
                   </a>
                   

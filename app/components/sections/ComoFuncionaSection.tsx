@@ -1,3 +1,5 @@
+import { handlerCallWhatsapp } from "~/utils/handlersUtils";
+
 export default function ComoFuncionaSection() {
   return (
     <section id="processo" className="py-16 lg:py-24 bg-white">
@@ -135,11 +137,10 @@ export default function ComoFuncionaSection() {
                 Vamos começar uma parceria
               </a>
               <a 
-                href="https://wa.me/+5583982078702"
-                target="_blank"
+                onClick={() => handlerCallWhatsapp()}
                 className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
               >
-                WhatsApp: (83) 9 8207-8702
+                WhatsApp
               </a>
             </div>
           </div>
