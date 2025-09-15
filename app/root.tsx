@@ -7,6 +7,7 @@ import {
 } from "react-router";
 import type { LinksFunction } from "react-router";
 import Analytics from "./components/Analytics";
+import CookieConsent from "./components/CookieConsent";
 import "./app.css";
 
 export const links: LinksFunction = () => [
@@ -46,6 +47,7 @@ export default function App() {
     <>
       <Analytics />
       <Outlet />
+      <CookieConsent />
     </>
   );
 }
