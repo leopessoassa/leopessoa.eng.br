@@ -17,18 +17,16 @@ export default function Analytics() {
     // Google Analytics 4
     const script1 = document.createElement("script");
     script1.async = true;
-    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+    script1.src = "https://www.googletagmanager.com/ns.html?id=GTM-PS4LXP3G";
     document.head.appendChild(script1);
 
     const script2 = document.createElement("script");
     script2.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', {
-        page_title: 'Leo Pessoa - Engenheiro Eletricista',
-        page_location: window.location.href
-      });
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PS4LXP3G');
     `;
     document.head.appendChild(script2);
 
@@ -42,7 +40,10 @@ export default function Analytics() {
 }
 
 // Função para rastrear eventos
-export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+export const trackEvent = (
+  eventName: string,
+  parameters?: Record<string, any>
+) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, parameters);
   }
