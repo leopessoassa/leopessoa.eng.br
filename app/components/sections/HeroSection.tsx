@@ -35,6 +35,15 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Logo */}
+          <div className="mb-6">
+            <img 
+              src="/images/logo-leo-pessoa-sem-subtitulo.webp" 
+              alt="Leo Pessoa - Engenheiro Eletricista" 
+              className="h-20 md:h-24 mx-auto"
+            />
+          </div>
+          
           {/* Badge */}
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <span className="text-sm font-medium">
