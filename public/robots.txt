@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://3on.eng.br/sitemap.xml
+Sitemap: https://leopessoa.eng.br/sitemap.xml

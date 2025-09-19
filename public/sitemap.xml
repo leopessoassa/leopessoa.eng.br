@@ -5,25 +5,8 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://3on.eng.br/</loc>
+  <loc>https://leopessoa.eng.br/</loc>
   <lastmod>2025-07-06T14:06:37+00:00</lastmod>
   <priority>1.00</priority>
 </url>
-<url>
-  <loc>https://3on.eng.br/residencial</loc>
-  <lastmod>2025-07-06T14:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://3on.eng.br/profissionais</loc>
-  <lastmod>2025-07-06T14:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://3on.eng.br/contato</loc>
-  <lastmod>2025-07-06T14:06:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
 </urlset>
