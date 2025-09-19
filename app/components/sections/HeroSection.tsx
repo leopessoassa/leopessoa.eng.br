@@ -61,7 +61,7 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
             Automação residencial que seus clientes <strong>entendem</strong> e{" "}
             <strong>aprovam no orçamento</strong>. Parceria técnica
-            descomplicada para arquitetos em João Pessoa.
+            descomplicada para arquitetos e design de interiores em João Pessoa.
           </p>
 
           {/* Social Proof */}

@@ -35,7 +35,7 @@ export default function SobreLeoSection() {
                   🎯 Missão Pessoal
                 </h3>
                 <p className="text-secondary-700 italic">
-                  "Ajudar arquitetos a impressionar seus clientes com automação que funciona, 
+                  "Ajudar arquitetos e design de interiores a impressionar seus clientes com automação que funciona, 
                   vende e valoriza o imóvel. Sem complicação, só resultados."
                 </p>
               </div>
@@ -108,7 +108,7 @@ export default function SobreLeoSection() {
             
             <div className="text-center mb-8 relative z-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-secondary-900 mb-4">
-                🤝 Por que arquitetos escolhem trabalhar comigo
+                🤝 Por que arquitetos e design de interiores escolhem trabalhar comigo
               </h3>
             </div>
             

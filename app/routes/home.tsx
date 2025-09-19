@@ -1,7 +1,6 @@
 import type { MetaFunction } from "react-router";
 import HeroSection from "~/components/sections/HeroSection";
 import ParaArquitetosSection from "~/components/sections/ParaArquitetosSection";
-import ComoFuncionaSection from "~/components/sections/ComoFuncionaSection";
 import CasesReaisSection from "~/components/sections/CasesReaisSection";
 import SobreLeoSection from "~/components/sections/SobreLeoSection";
 import ProcessoSection from "~/components/sections/ProcessoSection";
