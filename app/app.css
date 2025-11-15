@@ -1,53 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #EBF2F7; /* Azul-cinza muito claro */
-  --color-primary-100: #D8E3EB; /* Azul-cinza claro */
-  --color-primary-200: #B7C8DA; /* Azul-cinza suave */
-  --color-primary-300: #93AEC7; /* Azul-cinza médio */
-  --color-primary-400: #6B8BAF; /* Azul-cinza mais profundo */
-  --color-primary-500: #4A6E94; /* **Seu azul primário para links e icones** */
-  --color-primary-600: #365B7D; /* Azul escuro médio */
+  --color-primary-50: #ebf2f7; /* Azul-cinza muito claro */
+  --color-primary-100: #d8e3eb; /* Azul-cinza claro */
+  --color-primary-200: #b7c8da; /* Azul-cinza suave */
+  --color-primary-300: #93aec7; /* Azul-cinza médio */
+  --color-primary-400: #6b8baf; /* Azul-cinza mais profundo */
+  --color-primary-500: #4a6e94; /* **Seu azul primário para links e icones** */
+  --color-primary-600: #365b7d; /* Azul escuro médio */
   --color-primary-700: #254664; /* Azul marinho escuro */
-  --color-primary-800: #16324D; /* Azul marinho muito escuro */
-  --color-primary-900: #0A213B; /* Quase preto azulado */
-  --color-primary-950: #04101A; /* **Fundo principal escuro (hero, footer, seções específicas)** */
+  --color-primary-800: #16324d; /* Azul marinho muito escuro */
+  --color-primary-900: #0a213b; /* Quase preto azulado */
+  --color-primary-950: #04101a; /* **Fundo principal escuro (hero, footer, seções específicas)** */
 
-  --color-secondary-50: #FCFBF7; /* Off-white muito suave (quase branco) */
-  --color-secondary-100: #F6F4EF; /* Fundo principal claro */
-  --color-secondary-200: #EBE8E0; /* Cinza claro para cards/destaques */
-  --color-secondary-300: #DBD6CC; /* Cinza médio suave */
-  --color-secondary-400: #C9C2B7; /* Cinza para bordas ou divisores */
-  --color-secondary-500: #A8A095; /* **Cinza para texto secundário, legendas** */
-  --color-secondary-600: #8C847A; /* Cinza mais escuro */
-  --color-secondary-700: #6D6862; /* Cinza para texto em contraste */
-  --color-secondary-800: #4D4A46; /* Cinza para títulos em fundo claro */
-  --color-secondary-900: #33312F; /* **Cor de texto principal em fundos claros** */
-  --color-secondary-950: #1F1D1B; /* Cinza muito escuro para contraste */
+  --color-secondary-50: #fcfbf7; /* Off-white muito suave (quase branco) */
+  --color-secondary-100: #f6f4ef; /* Fundo principal claro */
+  --color-secondary-200: #ebe8e0; /* Cinza claro para cards/destaques */
+  --color-secondary-300: #dbd6cc; /* Cinza médio suave */
+  --color-secondary-400: #c9c2b7; /* Cinza para bordas ou divisores */
+  --color-secondary-500: #a8a095; /* **Cinza para texto secundário, legendas** */
+  --color-secondary-600: #8c847a; /* Cinza mais escuro */
+  --color-secondary-700: #6d6862; /* Cinza para texto em contraste */
+  --color-secondary-800: #4d4a46; /* Cinza para títulos em fundo claro */
+  --color-secondary-900: #33312f; /* **Cor de texto principal em fundos claros** */
+  --color-secondary-950: #1f1d1b; /* Cinza muito escuro para contraste */
 
-  --color-accent-50: #E0F7F7; /* Acento muito claro */
-  --color-accent-100: #B3EEEE; /* Acento claro */
-  --color-accent-200: #80E3E3; /* Acento suave */
-  --color-accent-300: #4DD8D8; /* Acento médio */
-  --color-accent-400: #20CACA; /* Acento vibrante */
-  --color-accent-500: #00BDBD; /* **Sua cor de acento principal (botões, ícones de destaque)** */
-  --color-accent-600: #00A6A6; /* Acento para hover states */
-  --color-accent-700: #008F8F; /* Acento mais escuro */
+  --color-accent-50: #e0f7f7; /* Acento muito claro */
+  --color-accent-100: #b3eeee; /* Acento claro */
+  --color-accent-200: #80e3e3; /* Acento suave */
+  --color-accent-300: #4dd8d8; /* Acento médio */
+  --color-accent-400: #20caca; /* Acento vibrante */
+  --color-accent-500: #00bdbd; /* **Sua cor de acento principal (botões, ícones de destaque)** */
+  --color-accent-600: #00a6a6; /* Acento para hover states */
+  --color-accent-700: #008f8f; /* Acento mais escuro */
   --color-accent-800: #007878; /* Acento profundo */
   --color-accent-900: #006060; /* Acento muito profundo */
   --color-accent-950: #004949; /* Acento mais escuro para detalhes */
 
-  --color-success-50: #EBFBEB; /* Verde suave */
-  --color-success-100: #D8F5D8;
-  --color-success-200: #B7EDBA;
-  --color-success-300: #93E49B;
-  --color-success-400: #6BD97F;
-  --color-success-500: #4CAF50; /* **Verde de sucesso padrão** */
-  --color-success-600: #3D9E41;
-  --color-success-700: #2E8C33;
-  --color-success-800: #207A26;
+  --color-success-50: #ebfbeb; /* Verde suave */
+  --color-success-100: #d8f5d8;
+  --color-success-200: #b7edba;
+  --color-success-300: #93e49b;
+  --color-success-400: #6bd97f;
+  --color-success-500: #4caf50; /* **Verde de sucesso padrão** */
+  --color-success-600: #3d9e41;
+  --color-success-700: #2e8c33;
+  --color-success-800: #207a26;
   --color-success-900: #126819;
-  --color-success-950: #073B0D;
+  --color-success-950: #073b0d;
+
+  /* Vermelho Harmonizado - Tons Terrosos e Sofisticados */
+  --color-red-50: #f8f3f3; /* Quase branco com leve toque rosado */
+  --color-red-100: #f1e8e8; /* Cinza rosado muito claro */
+  --color-red-200: #e3d1d1; /* Bege rosado suave */
+  --color-red-300: #d4b4b4; /* Rosa acinzentado médio */
+  --color-red-400: #c49696; /* Rosa terroso */
+  --color-red-500: #b47878; /* **Vermelho principal - tom terroso** */
+  --color-red-600: #9f6b6b; /* Vermelho escuro terroso */
+  --color-red-700: #8a5e5e; /* Marrom avermelhado */
+  --color-red-800: #755151; /* Marrom escuro com toque vermelho */
+  --color-red-900: #604444; /* Marrom muito escuro */
+  --color-red-950: #3d2c2c; /* Quase preto com nuance avermelhada */
 }
 
 * {
@@ -66,13 +79,22 @@ body {
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, theme(colors.secondary.900) 0%, theme(colors.secondary.700) 100%);
+  background: linear-gradient(
+    135deg,
+    theme(colors.secondary.900) 0%,
+    theme(colors.secondary.700) 100%
+  );
 }
 
 .gradient-cta {
-  background: linear-gradient(135deg, theme(colors.accent.500) 0%, theme(colors.accent.600) 100%);
+  background: linear-gradient(
+    135deg,
+    theme(colors.accent.500) 0%,
+    theme(colors.accent.600) 100%
+  );
 }
 
 .shadow-elegant {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
