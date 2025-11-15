@@ -4,14 +4,15 @@ export default function ParaArquitetosSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-900">
-            Cansado de perder projetos por falta de
-            <span className="text-primary-500">expertise elétrica</span>?
+            Transforme projetos comuns em{" "}
+            <span className="text-primary-500">
+              experiências extraordinárias
+            </span>
           </h2>
           <p className="text-xl md:text-2xl text-secondary-500 max-w-4xl mx-auto leading-relaxed">
-            Sei como é frustrante quando o cliente quer automação mas você não
-            tem o parceiro técnico certo.
+            {`Seus clientes querem mais que um projeto bonito - eles querem se sentir especiais.`}
             <strong className="text-secondary-800">
-              Vamos resolver isso juntos.
+              Vamos criar essa experiência juntos.
             </strong>
           </p>
         </div>
@@ -48,7 +49,7 @@ export default function ParaArquitetosSection() {
                   </svg>
                 </div>
                 <p className="text-secondary-700">
-                  "Projetos genéricos podem estagnar minha carreira"
+                  "Projetos bonitos, mas que não geram 'uau' no cliente"
                 </p>
               </div>
 
@@ -67,7 +68,7 @@ export default function ParaArquitetosSection() {
                   </svg>
                 </div>
                 <p className="text-secondary-700">
-                  "Cliente acha automação 'fútil' e corta do orçamento"
+                  "Cliente vê automação como 'luxo desnecessário'"
                 </p>
               </div>
 
@@ -86,7 +87,7 @@ export default function ParaArquitetosSection() {
                   </svg>
                 </div>
                 <p className="text-secondary-700">
-                  "Cliente quer automação, mas não sei por onde começar"
+                  "Dificuldade para justificar o valor agregado da automação"
                 </p>
               </div>
 
@@ -106,8 +107,7 @@ export default function ParaArquitetosSection() {
                   </svg>
                 </div>
                 <p className="text-secondary-700">
-                  "Orçamento estourou porque não calculei a parte elétrica
-                  direito"
+                  "Concorrência oferece 'mais do mesmo'"
                 </p>
               </div>
 
@@ -126,7 +126,7 @@ export default function ParaArquitetosSection() {
                   </svg>
                 </div>
                 <p className="text-secondary-700">
-                  "Obra atrasou por problemas na instalação elétrica"
+                  "Cliente não entende o retorno do investimento"
                 </p>
               </div>
             </div>
@@ -160,10 +160,10 @@ export default function ParaArquitetosSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary-800">
-                    Projetos que Impressionam
+                    Projetos Memoráveis
                   </h4>
                   <p className="text-secondary-600">
-                    Diferencial que eleva sua carreira
+                    Clientes que viram fãs da sua marca
                   </p>
                 </div>
               </div>
@@ -180,10 +180,10 @@ export default function ParaArquitetosSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary-800">
-                    ROI Demonstrável
+                    Valor Tangível
                   </h4>
                   <p className="text-secondary-600">
-                    Mostro valorização real do imóvel
+                    ROI que convence na primeira reunião
                   </p>
                 </div>
               </div>
@@ -204,10 +204,10 @@ export default function ParaArquitetosSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary-800">
-                    Orçamentos Realistas
+                    Diferencial Competitivo
                   </h4>
                   <p className="text-secondary-600">
-                    Automação que cabe no bolso do cliente
+                    Automação que ninguém mais oferece
                   </p>
                 </div>
               </div>
@@ -228,10 +228,10 @@ export default function ParaArquitetosSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary-800">
-                    Linguagem Simples
+                    Vendas Facilitadas
                   </h4>
                   <p className="text-secondary-600">
-                    Explicações que vendem o projeto
+                    Apresentações que vendem sozinhas
                   </p>
                 </div>
               </div>
@@ -249,10 +249,10 @@ export default function ParaArquitetosSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-secondary-800">
-                    Suporte Comercial
+                    Clientes Encantados
                   </h4>
                   <p className="text-secondary-600">
-                    Te ajudo a convencer o cliente
+                    Referências que multiplicam seus negócios
                   </p>
                 </div>
               </div>
