@@ -1,65 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  --color-primary-50: #EBF2F7; /* Azul-cinza muito claro */
+  --color-primary-100: #D8E3EB; /* Azul-cinza claro */
+  --color-primary-200: #B7C8DA; /* Azul-cinza suave */
+  --color-primary-300: #93AEC7; /* Azul-cinza médio */
+  --color-primary-400: #6B8BAF; /* Azul-cinza mais profundo */
+  --color-primary-500: #4A6E94; /* **Seu azul primário para links e icones** */
+  --color-primary-600: #365B7D; /* Azul escuro médio */
+  --color-primary-700: #254664; /* Azul marinho escuro */
+  --color-primary-800: #16324D; /* Azul marinho muito escuro */
+  --color-primary-900: #0A213B; /* Quase preto azulado */
+  --color-primary-950: #04101A; /* **Fundo principal escuro (hero, footer, seções específicas)** */
 
-  --color-secondary-50: #f8fafc;
-  --color-secondary-100: #f1f5f9;
-  --color-secondary-200: #e2e8f0;
-  --color-secondary-300: #cbd5e1;
-  --color-secondary-400: #94a3b8;
-  --color-secondary-500: #64748b;
-  --color-secondary-600: #475569;
-  --color-secondary-700: #334155;
-  --color-secondary-800: #1e293b;
-  --color-secondary-900: #0f172a;
-  --color-secondary-950: #020617;
+  --color-secondary-50: #FCFBF7; /* Off-white muito suave (quase branco) */
+  --color-secondary-100: #F6F4EF; /* Fundo principal claro */
+  --color-secondary-200: #EBE8E0; /* Cinza claro para cards/destaques */
+  --color-secondary-300: #DBD6CC; /* Cinza médio suave */
+  --color-secondary-400: #C9C2B7; /* Cinza para bordas ou divisores */
+  --color-secondary-500: #A8A095; /* **Cinza para texto secundário, legendas** */
+  --color-secondary-600: #8C847A; /* Cinza mais escuro */
+  --color-secondary-700: #6D6862; /* Cinza para texto em contraste */
+  --color-secondary-800: #4D4A46; /* Cinza para títulos em fundo claro */
+  --color-secondary-900: #33312F; /* **Cor de texto principal em fundos claros** */
+  --color-secondary-950: #1F1D1B; /* Cinza muito escuro para contraste */
 
-  --color-accent-50: #fff7ed;
-  --color-accent-100: #ffedd5;
-  --color-accent-200: #fed7aa;
-  --color-accent-300: #fdba74;
-  --color-accent-400: #fb923c;
-  --color-accent-500: #f97316;
-  --color-accent-600: #ea580c;
-  --color-accent-700: #c2410c;
-  --color-accent-800: #9a3412;
-  --color-accent-900: #7c2d12;
-  --color-accent-950: #431407;
+  --color-accent-50: #E0F7F7; /* Acento muito claro */
+  --color-accent-100: #B3EEEE; /* Acento claro */
+  --color-accent-200: #80E3E3; /* Acento suave */
+  --color-accent-300: #4DD8D8; /* Acento médio */
+  --color-accent-400: #20CACA; /* Acento vibrante */
+  --color-accent-500: #00BDBD; /* **Sua cor de acento principal (botões, ícones de destaque)** */
+  --color-accent-600: #00A6A6; /* Acento para hover states */
+  --color-accent-700: #008F8F; /* Acento mais escuro */
+  --color-accent-800: #007878; /* Acento profundo */
+  --color-accent-900: #006060; /* Acento muito profundo */
+  --color-accent-950: #004949; /* Acento mais escuro para detalhes */
 
-  --color-success-50: #f0fdf4;
-  --color-success-100: #dcfce7;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #86efac;
-  --color-success-400: #4ade80;
-  --color-success-500: #22c55e;
-  --color-success-600: #16a34a;
-  --color-success-700: #15803d;
-  --color-success-800: #166534;
-  --color-success-900: #14532d;
-  --color-success-950: #052e16;
-
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-800: #1e293b;
-  --color-slate-900: #0f172a;
-  --color-slate-950: #020617;
+  --color-success-50: #EBFBEB; /* Verde suave */
+  --color-success-100: #D8F5D8;
+  --color-success-200: #B7EDBA;
+  --color-success-300: #93E49B;
+  --color-success-400: #6BD97F;
+  --color-success-500: #4CAF50; /* **Verde de sucesso padrão** */
+  --color-success-600: #3D9E41;
+  --color-success-700: #2E8C33;
+  --color-success-800: #207A26;
+  --color-success-900: #126819;
+  --color-success-950: #073B0D;
 }
 
 * {
@@ -78,7 +66,7 @@ body {
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, theme(colors.slate.900) 0%, theme(colors.slate.700) 100%);
+  background: linear-gradient(135deg, theme(colors.secondary.900) 0%, theme(colors.secondary.700) 100%);
 }
 
 .gradient-cta {

@@ -53,10 +53,10 @@ export default function Home() {
       <VamosConversar />
 
       {/* Footer */}
-      <footer className="bg-secondary-900 text-white py-8">
+      <footer className="bg-primary-950 text-secondary-50 py-8">
         <div className="container mx-auto px-6 text-center">
           <p>
-            &copy; 2024 Leo Pessoa - Engenheiro Eletricista. Todos os direitos
+            © 2024 Leo Pessoa - Engenheiro Eletricista. Todos os direitos
             reservados.
           </p>
           <p className="mt-2 text-secondary-400">João Pessoa - PB | CREA-PB</p>
