@@ -20,8 +20,10 @@ export default function ProcessoSection() {
             <span className="text-accent-500">parceria</span>
           </h2>
           <p className="text-xl md:text-2xl text-secondary-100 max-w-4xl mx-auto leading-relaxed">
-            Processo simples e transparente para{" "}
-            <strong className="text-secondary-50">resultados garantidos</strong>
+            Uma parceria estratégica que transforma sua visão criativa em{" "}
+            <strong className="text-secondary-50">
+              experiências inesquecíveis
+            </strong>
           </p>
         </div>
 
@@ -45,13 +47,13 @@ export default function ProcessoSection() {
               </div>
               <div className="bg-secondary-50/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-xl font-bold text-secondary-50 mb-4">
-                  1. Análise
+                  1. Inspiração
                 </h3>
                 <p className="text-secondary-100 mb-4">
-                  Entendemos seu projeto, necessidades do cliente e orçamento
-                  disponível
+                  Entendemos sua visão criativa e descobrimos como a tecnologia
+                  pode potencializá-la
                 </p>
-                <ul className="text-sm text-secondary-500 space-y-1">
+                <ul className="text-sm text-secondary-300 space-y-1">
                   <li className="flex items-center gap-2">
                     <svg
                       className="w-3 h-3 text-accent-500"
@@ -64,7 +66,7 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Reunião inicial
+                    Conversa estratégica
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
@@ -78,7 +80,7 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Análise do projeto
+                    Análise do conceito
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
@@ -92,7 +94,7 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Definição de escopo
+                    Definição de experiências
                   </li>
                 </ul>
               </div>
@@ -116,15 +118,16 @@ export default function ProcessoSection() {
               </div>
               <div className="bg-secondary-50/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-xl font-bold text-secondary-50 mb-4">
-                  2. Projeto
+                  2. Criação
                 </h3>
                 <p className="text-secondary-100 mb-4">
-                  Desenvolvimento técnico integrado ao seu workflow BIM/AutoCAD
+                  Desenvolvemos a solução técnica que materializa sua visão
+                  arquitetônica
                 </p>
-                <ul className="text-sm text-secondary-500 space-y-1">
+                <ul className="text-sm text-secondary-300 space-y-1">
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-primary-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -134,11 +137,11 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Projeto elétrico
+                    Integração BIM/AutoCAD
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-primary-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -148,11 +151,11 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Automação residencial
+                    Automação inteligente
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-primary-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -162,7 +165,7 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Compatibilização
+                    Apresentação vendedora
                   </li>
                 </ul>
               </div>
@@ -192,15 +195,16 @@ export default function ProcessoSection() {
               </div>
               <div className="bg-secondary-50/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-xl font-bold text-secondary-50 mb-4">
-                  3. Execução
+                  3. Realização
                 </h3>
                 <p className="text-secondary-100 mb-4">
-                  Acompanhamento técnico e suporte durante toda a obra
+                  Acompanhamos cada detalhe para garantir que sua visão se torne
+                  realidade
                 </p>
-                <ul className="text-sm text-secondary-500 space-y-1">
+                <ul className="text-sm text-secondary-300 space-y-1">
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-success-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -210,11 +214,11 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Suporte técnico
+                    Suporte especializado
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-success-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -224,11 +228,11 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Acompanhamento
+                    Qualidade assegurada
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-success-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -238,7 +242,7 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Resolução de dúvidas
+                    Prazos respeitados
                   </li>
                 </ul>
               </div>
@@ -262,15 +266,16 @@ export default function ProcessoSection() {
               </div>
               <div className="bg-secondary-50/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-xl font-bold text-secondary-50 mb-4">
-                  4. Entrega
+                  4. Encantamento
                 </h3>
                 <p className="text-secondary-100 mb-4">
-                  Cliente satisfeito e você com mais um projeto de sucesso
+                  Cliente apaixonado pelo projeto e você reconhecido pela
+                  excelência
                 </p>
-                <ul className="text-sm text-secondary-500 space-y-1">
+                <ul className="text-sm text-secondary-300 space-y-1">
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-secondary-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -280,11 +285,11 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Testes finais
+                    Experiência completa
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-secondary-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -294,11 +299,11 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Treinamento
+                    Cliente educado
                   </li>
                   <li className="flex items-center gap-2">
                     <svg
-                      className="w-3 h-3 text-secondary-500"
+                      className="w-3 h-3 text-accent-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -308,7 +313,7 @@ export default function ProcessoSection() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    Garantia
+                    Referências garantidas
                   </li>
                 </ul>
               </div>
@@ -328,21 +333,21 @@ export default function ProcessoSection() {
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                   />
                 </svg>
                 <h3 className="text-2xl font-bold text-secondary-50">
-                  Prazo médio: 15 dias
+                  Projetos extraordinários em 15 dias
                 </h3>
               </div>
               <p className="text-secondary-100 mb-6">
-                Da análise inicial até a entrega do projeto completo
+                Da primeira conversa até a apresentação que encanta seu cliente
               </p>
               <a
                 href="#contato"
                 className="bg-accent-500 hover:bg-accent-600 text-secondary-50 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
               >
-                Começar agora
+                Vamos criar juntos
               </a>
             </div>
           </div>

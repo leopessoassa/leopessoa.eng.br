@@ -6,15 +6,15 @@ export default function CasesReaisSection() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-900">
             Cases reais:{" "}
             <span className="text-primary-500">
-              projetos que venderam sozinhos
+              projetos que se tornaram referência
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-secondary-500 max-w-4xl mx-auto leading-relaxed">
             Veja como a automação transformou projetos simples em{" "}
             <strong className="text-secondary-800">
               experiências que impressionam
-            </strong>
-            {" "}valorizam o imóvel.
+            </strong>{" "}
+            e valorizam o imóvel.
           </p>
         </div>
 
@@ -46,8 +46,9 @@ export default function CasesReaisSection() {
                 Condomínio Ville Cristal - Gravatá - PE
               </h3>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Projeto de automação residencial com controle de iluminação, som
-                ambiente e sistema de redes.
+                Uma residência que impressiona desde a chegada. Automação
+                inteligente que se adapta ao estilo de vida da família, criando
+                momentos únicos em cada ambiente.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between">
@@ -151,9 +152,9 @@ export default function CasesReaisSection() {
                 Condomínio Alphaville Paraíba - Bayeux - PB
               </h3>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Projeto elétrico completo com sistema de iluminação
-                personalizada e controle de ambientes por aplicativo, sistema de
-                segurança integrado com IA.
+                Um projeto que redefine o conceito de casa inteligente. Cada
+                detalhe pensado para criar uma experiência única, onde
+                tecnologia e design se encontram em perfeita harmonia.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between">
@@ -266,7 +267,9 @@ export default function CasesReaisSection() {
                 Apartamento 3 quartos - João Pessoa - PB
               </h3>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Reforma para projeto de iluminação inteligente e climatização
+                Prova de que espaços menores podem ter grandes experiências.
+                Automação discreta que transforma o cotidiano em momentos
+                especiais.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between">
@@ -339,7 +342,8 @@ export default function CasesReaisSection() {
             </div>
           </div>
         </div>
-
+        {/* 
+        
         <div className="bg-secondary-50 rounded-2xl p-8 lg:p-12 shadow-lg">
           <div className="text-center mb-8">
             <h3 className="text-2xl lg:text-3xl font-bold text-secondary-900 mb-4">
@@ -424,21 +428,95 @@ export default function CasesReaisSection() {
             </div>
           </div>
         </div>
+*/}
+        <div className="bg-secondary-50 rounded-2xl p-8 lg:p-12 shadow-lg">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl lg:text-3xl font-bold text-secondary-900 mb-4">
+              <svg
+                className="w-8 h-8 inline mr-2 text-primary-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              O que esses projetos geraram para os arquitetos
+            </h3>
+          </div>
 
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center">
+              <div className="bg-primary-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-6 h-6 text-primary-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h4 className="font-bold text-secondary-800 mb-2">
+                Reconhecimento
+              </h4>
+              <p className="text-secondary-600">
+                Projetos que viraram referência no mercado local
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-accent-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-6 h-6 text-accent-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-secondary-800 mb-2">Indicações</h4>
+              <p className="text-secondary-600">
+                Clientes que se tornaram embaixadores da marca
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-success-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-6 h-6 text-success-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h4 className="font-bold text-secondary-800 mb-2">Valorização</h4>
+              <p className="text-secondary-600">
+                Projetos com valores 30% acima da média
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="mt-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl lg:text-3xl font-bold text-secondary-900 mb-4">
-              Seu próximo projeto pode ser o próximo case de sucesso
+              Seu próximo projeto pode se tornar uma referência
             </h3>
             <p className="text-lg text-secondary-600 mb-8">
-              Vamos conversar sobre como transformar seu projeto em uma
-              experiência que vende sozinha.
+              Vamos conversar sobre como transformar sua visão criativa em um
+              projeto que marca época e eleva sua carreira.
             </p>
             <a
               href="#contato"
               className="bg-accent-500 hover:bg-accent-600 text-secondary-50 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
             >
-              Quero criar um case de sucesso
+              Quero criar um projeto memorável
             </a>
           </div>
         </div>

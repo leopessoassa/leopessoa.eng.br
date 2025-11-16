@@ -6,12 +6,14 @@ export default function SobreLeoSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-900">
-            Sobre <span className="text-primary-500">Leo Pessoa</span>
+            Conheça <span className="text-primary-500">Leo Pessoa</span>
           </h2>
           <p className="text-xl md:text-2xl text-secondary-500 max-w-4xl mx-auto leading-relaxed">
-            O engenheiro que{" "}
-            <strong className="text-secondary-800">entende de negócios</strong>{" "}
-            e sabe que tecnologia só vale quando agrega valor real ao projeto.
+            O parceiro que{" "}
+            <strong className="text-secondary-800">
+              potencializa sua criatividade
+            </strong>{" "}
+            e transforma projetos em experiências que marcam carreiras.
           </p>
         </div>
 
@@ -32,7 +34,7 @@ export default function SobreLeoSection() {
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                   <h3 className="text-xl font-bold text-secondary-900">
                     Missão Pessoal
@@ -47,7 +49,7 @@ export default function SobreLeoSection() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-secondary-900 mb-6">
-                  Credibilidade Técnica + Visão Comercial
+                  A Combinação Única que Faz a Diferença
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4 p-4 bg-secondary-200 rounded-lg">
@@ -62,10 +64,11 @@ export default function SobreLeoSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800">
-                        Dupla Formação
+                        Visão Técnica + Criativa
                       </h4>
                       <p className="text-secondary-600">
-                        Engenheiro Eletricista + Analista de Sistemas
+                        Engenheiro que entende de design e experiência do
+                        usuário
                       </p>
                     </div>
                   </div>
@@ -82,10 +85,10 @@ export default function SobreLeoSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800">
-                        MBA Gestão Empresarial
+                        Mentalidade Estratégica
                       </h4>
                       <p className="text-secondary-600">
-                        FGV - Foco em resultados e ROI
+                        MBA FGV - Entendo que cada projeto é um investimento
                       </p>
                     </div>
                   </div>
@@ -97,20 +100,15 @@ export default function SobreLeoSection() {
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clip-rule="evenodd"
-                        />
+                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                       </svg>
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800">
-                        Pós-graduação Instalações Elétricas
+                        Especialização Avançada
                       </h4>
                       <p className="text-secondary-600">
-                        Residenciais e Comerciais
+                        Pós-graduação em sistemas que realmente impressionam
                       </p>
                     </div>
                   </div>
@@ -123,15 +121,14 @@ export default function SobreLeoSection() {
                         viewBox="0 0 20 20"
                       >
                         <path d="M10.707 2.293a1 1 0 00-1.414 0l-9 9a1 1 0 001.414 1.414L10 4.414l8.293 8.293a1 1 0 001.414-1.414l-9-9z" />
-                        <path d="M17 7v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h12a1 1 0 011 1z" />
                       </svg>
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800">
-                        Especialista Automação Residencial
+                        Automação que Encanta
                       </h4>
                       <p className="text-secondary-600">
-                        Soluções inteligentes e integradas
+                        Tecnologia invisível que cria experiências memoráveis
                       </p>
                     </div>
                   </div>
@@ -152,10 +149,10 @@ export default function SobreLeoSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800">
-                        Especialista BIM &amp; AutoCAD
+                        Integração Perfeita
                       </h4>
                       <p className="text-secondary-600">
-                        Integração total com seu workflow
+                        Domínio total do seu workflow BIM & AutoCAD
                       </p>
                     </div>
                   </div>
@@ -163,7 +160,7 @@ export default function SobreLeoSection() {
                   <div className="flex items-start gap-4 p-4 bg-secondary-200 rounded-lg">
                     <div className="w-10 h-10 bg-secondary-300 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg
-                        className="w-5 h-5 text-secondary-500"
+                        className="w-5 h-5 text-secondary-700"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -176,9 +173,11 @@ export default function SobreLeoSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800">
-                        Desenvolvedor Full Stack
+                        Pensamento Sistêmico
                       </h4>
-                      <p className="text-secondary-600">Visão de processos</p>
+                      <p className="text-secondary-600">
+                        Desenvolvedor que vê o projeto como experiência completa
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -216,7 +215,6 @@ export default function SobreLeoSection() {
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     <path
                       fill-rule="evenodd"
                       d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
@@ -228,7 +226,8 @@ export default function SobreLeoSection() {
                   Falo sua língua
                 </h4>
                 <p className="text-secondary-600">
-                  Entendo design e sei explicar técnica de forma simples
+                  Entendo sua visão criativa e sei como materializá-la
+                  tecnicamente
                 </p>
               </div>
 
@@ -243,17 +242,17 @@ export default function SobreLeoSection() {
                   </svg>
                 </div>
                 <h4 className="font-bold text-secondary-800 mb-2">
-                  Penso em negócios
+                  Penso como empresário
                 </h4>
                 <p className="text-secondary-600">
-                  MBA me ensinou que tecnologia precisa gerar ROI
+                  Cada solução é pensada para gerar valor e diferenciação real
                 </p>
               </div>
 
               <div className="text-center">
                 <div className="bg-secondary-300 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg
-                    className="w-8 h-8 text-secondary-500"
+                    className="w-8 h-8 text-secondary-700"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -261,10 +260,10 @@ export default function SobreLeoSection() {
                   </svg>
                 </div>
                 <h4 className="font-bold text-secondary-800 mb-2">
-                  Pai de família
+                  Entendo pessoas reais
                 </h4>
                 <p className="text-secondary-600">
-                  Entendo o que realmente importa para os clientes
+                  Pai de família que sabe o que realmente emociona os clientes
                 </p>
               </div>
             </div>
@@ -318,7 +317,7 @@ export default function SobreLeoSection() {
                     Vamos conversar
                   </a>
                   <a
-                    href="#"
+                    onClick={() => handlerCallWhatsapp()}
                     className="border-2 border-secondary-100/30 hover:border-accent-500 hover:bg-accent-500/10 text-secondary-50 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <svg

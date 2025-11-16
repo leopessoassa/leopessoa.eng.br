@@ -1,3 +1,4 @@
+import { handlerCallWhatsapp } from "~/utils/handlersUtils";
 import ContactForm from "../ContactForm";
 
 export default function VamosConversar() {
@@ -84,7 +85,7 @@ export default function VamosConversar() {
 
                 <div className="space-y-4">
                   <a
-                    href="#"
+                    onClick={() => handlerCallWhatsapp()}
                     className="flex items-center gap-4 p-4 bg-secondary-50/10 backdrop-blur-sm rounded-lg hover:bg-secondary-50/20 transition-colors"
                   >
                     <div className="w-12 h-12 bg-success-500 rounded-lg flex items-center justify-center">
