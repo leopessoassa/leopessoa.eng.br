@@ -1,100 +1,372 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 
-@theme {
-  --color-primary-50: #ebf2f7; /* Azul-cinza muito claro */
-  --color-primary-100: #d8e3eb; /* Azul-cinza claro */
-  --color-primary-200: #b7c8da; /* Azul-cinza suave */
-  --color-primary-300: #93aec7; /* Azul-cinza médio */
-  --color-primary-400: #6b8baf; /* Azul-cinza mais profundo */
-  --color-primary-500: #4a6e94; /* **Seu azul primário para links e icones** */
-  --color-primary-600: #365b7d; /* Azul escuro médio */
-  --color-primary-700: #254664; /* Azul marinho escuro */
-  --color-primary-800: #16324d; /* Azul marinho muito escuro */
-  --color-primary-900: #0a213b; /* Quase preto azulado */
-  --color-primary-950: #04101a; /* **Fundo principal escuro (hero, footer, seções específicas)** */
+ @theme {
 
-  --color-secondary-50: #fcfbf7; /* Off-white muito suave (quase branco) */
-  --color-secondary-100: #f6f4ef; /* Fundo principal claro */
-  --color-secondary-200: #ebe8e0; /* Cinza claro para cards/destaques */
-  --color-secondary-300: #dbd6cc; /* Cinza médio suave */
-  --color-secondary-400: #c9c2b7; /* Cinza para bordas ou divisores */
-  --color-secondary-500: #a8a095; /* **Cinza para texto secundário, legendas** */
-  --color-secondary-600: #8c847a; /* Cinza mais escuro */
-  --color-secondary-700: #6d6862; /* Cinza para texto em contraste */
-  --color-secondary-800: #4d4a46; /* Cinza para títulos em fundo claro */
-  --color-secondary-900: #33312f; /* **Cor de texto principal em fundos claros** */
-  --color-secondary-950: #1f1d1b; /* Cinza muito escuro para contraste */
+   --color-primary-50: #ebf2f7;
+   /* Primary — Azul-cinza */
+   --color-primary-100: #d8e3eb;
+   --color-primary-200: #b7c8da;
+   --color-primary-300: #93aec7;
+   --color-primary-400: #6b8baf;
+   --color-primary-500: #4a6e94;
+   --color-primary-600: #365b7d;
+   --color-primary-700: #254664;
+   --color-primary-800: #16324d;
+   --color-primary-900: #0a213b;
+   --color-primary-950: #04101a;
 
-  --color-accent-50: #e0f7f7; /* Acento muito claro */
-  --color-accent-100: #b3eeee; /* Acento claro */
-  --color-accent-200: #80e3e3; /* Acento suave */
-  --color-accent-300: #4dd8d8; /* Acento médio */
-  --color-accent-400: #20caca; /* Acento vibrante */
-  --color-accent-500: #00bdbd; /* **Sua cor de acento principal (botões, ícones de destaque)** */
-  --color-accent-600: #00a6a6; /* Acento para hover states */
-  --color-accent-700: #008f8f; /* Acento mais escuro */
-  --color-accent-800: #007878; /* Acento profundo */
-  --color-accent-900: #006060; /* Acento muito profundo */
-  --color-accent-950: #004949; /* Acento mais escuro para detalhes */
+   --color-secondary-50: #fcfbf7;
+   /* Secondary — Off-white / Bege / Cinza quente */
+   --color-secondary-100: #f6f4ef;
+   --color-secondary-200: #ebe8e0;
+   --color-secondary-300: #dbd6cc;
+   --color-secondary-400: #c9c2b7;
+   --color-secondary-500: #a8a095;
+   --color-secondary-600: #8c847a;
+   --color-secondary-700: #6d6862;
+   --color-secondary-800: #4d4a46;
+   --color-secondary-900: #33312f;
+   --color-secondary-950: #1f1d1b;
 
-  --color-success-50: #ebfbeb; /* Verde suave */
-  --color-success-100: #d8f5d8;
-  --color-success-200: #b7edba;
-  --color-success-300: #93e49b;
-  --color-success-400: #6bd97f;
-  --color-success-500: #4caf50; /* **Verde de sucesso padrão** */
-  --color-success-600: #3d9e41;
-  --color-success-700: #2e8c33;
-  --color-success-800: #207a26;
-  --color-success-900: #126819;
-  --color-success-950: #073b0d;
+   --color-accent-50: #e0f7f7;
+   /* Accent — Teal */
+   --color-accent-100: #b3eeee;
+   --color-accent-200: #80e3e3;
+   --color-accent-300: #4dd8d8;
+   --color-accent-400: #20caca;
+   --color-accent-500: #00bdbd;
+   --color-accent-600: #00a6a6;
+   --color-accent-700: #008f8f;
+   --color-accent-800: #007878;
+   --color-accent-900: #006060;
+   --color-accent-950: #004949;
 
-  /* Vermelho Harmonizado - Tons Terrosos e Sofisticados */
-  --color-red-50: #f8f3f3; /* Quase branco com leve toque rosado */
-  --color-red-100: #f1e8e8; /* Cinza rosado muito claro */
-  --color-red-200: #e3d1d1; /* Bege rosado suave */
-  --color-red-300: #d4b4b4; /* Rosa acinzentado médio */
-  --color-red-400: #c49696; /* Rosa terroso */
-  --color-red-500: #b47878; /* **Vermelho principal - tom terroso** */
-  --color-red-600: #9f6b6b; /* Vermelho escuro terroso */
-  --color-red-700: #8a5e5e; /* Marrom avermelhado */
-  --color-red-800: #755151; /* Marrom escuro com toque vermelho */
-  --color-red-900: #604444; /* Marrom muito escuro */
-  --color-red-950: #3d2c2c; /* Quase preto com nuance avermelhada */
-}
+   --color-success-50: #ebfbeb;
+   /* Success — Verde */
+   --color-success-100: #d8f5d8;
+   --color-success-200: #b7edba;
+   --color-success-300: #93e49b;
+   --color-success-400: #6bd97f;
+   --color-success-500: #4caf50;
+   --color-success-600: #3d9e41;
+   --color-success-700: #2e8c33;
+   --color-success-800: #207a26;
+   --color-success-900: #126819;
+   --color-success-950: #073b0d;
 
-* {
-  box-sizing: border-box;
-}
+   --color-red-50: #f8f3f3;
+   /* Red — Vermelho terroso harmonizado */
+   --color-red-100: #f1e8e8;
+   --color-red-200: #e3d1d1;
+   --color-red-300: #d4b4b4;
+   --color-red-400: #c49696;
+   --color-red-500: #b47878;
+   --color-red-600: #9f6b6b;
+   --color-red-700: #8a5e5e;
+   --color-red-800: #755151;
+   --color-red-900: #604444;
+   --color-red-950: #3d2c2c;
 
-html {
-  scroll-behavior: smooth;
-}
+   --color-slate-blue-500: #4a5568;
+   /* Slate Blue — Segundo tom de azul / profundidade entre seções */
+   --color-slate-blue-600: #3d4a5c;
+   --color-slate-blue-700: #2d3748;
+   --color-slate-blue-800: #1e2a3a;
 
-body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  color: theme(colors.secondary.800);
-  background-color: theme(colors.secondary.50);
-}
+   --color-gold-400: #d4a843;
+   /* Gold — Acento premium / identidade de marca */
+   --color-gold-500: #c8952a;
+   --color-gold-600: #b07d1c;
+ }
 
-.gradient-hero {
-  background: linear-gradient(
-    135deg,
-    theme(colors.secondary.900) 0%,
-    theme(colors.secondary.700) 100%
-  );
-}
 
-.gradient-cta {
-  background: linear-gradient(
-    135deg,
-    theme(colors.accent.500) 0%,
-    theme(colors.accent.600) 100%
-  );
-}
+ *, *::before, *::after {
+   box-sizing: border-box;
+ }
 
-.shadow-elegant {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
+ html {
+   scroll-behavior: smooth;
+ }
+
+ body {
+   font-family: "Inter", sans-serif;
+   line-height: 1.6;
+   color: var(--color-secondary-800);
+   background-color: var(--color-secondary-50);
+ }
+
+ .gradient-hero {
+   background: linear-gradient(135deg, var(--color-secondary-900) 0%, var(--color-secondary-700) 100%);
+ }
+
+ .gradient-cta {
+   background: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-600) 100%);
+ }
+
+ .shadow-elegant {
+   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+ }
+
+ /* GLOBAL — Transições suaves em links e botões */
+
+ a,
+ button {
+   transition-property: color, background-color, border-color, box-shadow, transform;
+   transition-duration: 200ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ /* PILAR 1 — Divisores Angulares de Seção Técnica: clip-path polygon no pseudo-elemento ::after
+Uso: adicionar a classe .section-divider + modificador na tag
+
+ que PRECEDE a próxima seção. O modificador define a cor de preenchimento do divisor, que deve corresponder ao background da seção seguinte. */
+
+
+
+ .section-divider {
+   position: relative;
+   /* overflow: hidden removido intencionalmente — o ::after deve "vazar" para baixo, cobrindo o início da próxima seção. Use padding-bottom adequado na seção pai. */
+ }
+
+ /* Diagonal: sobe da esquerda para a direita (padrão) */
+ .section-divider::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 80px;
+   /* polygon(x-esq y-esq-topo, x-dir y-dir-topo, x-dir y-dir-base, x-esq y-esq-base) */
+   clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
+   pointer-events: none;
+   z-index: 1;
+ }
+
+ /* Diagonal reversa: sobe da direita para a esquerda */
+ .section-divider--skew-reverse::after {
+   clip-path: polygon(0 0%, 100% 40%, 100% 100%, 0% 100%);
+ }
+
+ /* --- Modificadores de cor (cor = fundo da seção seguinte) --- */
+
+ /* Hero/Footer escuro → próxima seção é primary-950 */
+ .section-divider--light-to-dark::after {
+   background-color: var(--color-primary-950);
+ }
+
+ /* Seção escura → próxima seção é secondary-100 (claro) */
+ .section-divider--dark-to-light::after {
+   background-color: var(--color-secondary-100);
+ }
+
+ /* Seção escura → próxima seção é slate-blue-800 (azul médio) */
+ .section-divider--dark-to-mid::after {
+   background-color: var(--color-slate-blue-800);
+ }
+
+ /* Seção slate-blue → próxima seção é secondary-50 (quase branco) */
+ .section-divider--mid-to-light::after {
+   background-color: var(--color-secondary-50);
+ }
+
+ /* Seção clara → próxima seção com hint de teal (acento suave) */
+ .section-divider--light-to-accent::after {
+   background-color: color-mix(in srgb, var(--color-accent-500) 8%, var(--color-secondary-100));
+ }
+
+ /* Seção clara → próxima é primary-800/slate gradient (CTA) */
+ .section-divider--light-to-cta::after {
+   background-color: var(--color-primary-800);
+ }
+
+ @media (max-width: 768px) {
+   .section-divider::after {
+     height: 50px;
+   }
+ }
+
+ /* PILAR 2 — Sistema de Camadas Cromáticas 5 layers definem a identidade visual das seções. Aplicar no atributo className da tag
+
+. */
+
+
+
+ /* Layer 1 — Escuro máximo: Hero, Footer */
+ .bg-layer-1 {
+   background-color: var(--color-primary-950);
+ }
+
+ /* Layer 2 — Azul médio: ParaArquitetosSection, destaque B2B */
+ .bg-layer-2 {
+   background-color: var(--color-slate-blue-800);
+ }
+
+ /* Layer 3 — Claro quente: seções de conteúdo principal */
+ .bg-layer-3 {
+   background-color: var(--color-secondary-100);
+ }
+
+ /* Layer 4 — Quase branco: cards, alternância, SobreLeo */
+ .bg-layer-4 {
+   background-color: var(--color-secondary-50);
+ }
+
+ /* Layer 5 — Gradiente profundo: VamosConversar (CTA final) */
+ .bg-layer-5 {
+   background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-slate-blue-700) 100%);
+ }
+
+ /* Hero premium — upgrade do gradient-hero original */
+ .bg-layer-gradient-hero {
+   background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-slate-blue-800) 60%, var(--color-primary-900) 100%);
+ }
+
+ /* PILAR 3 — Cards de Cases Reais (Premium) Aplicar .card-case no container do card. Usar .card-case--gold para o case em destaque. Estrutura interna esperada: .card-case .card-case__content .card-case__tag .card-case__title .card-case__description */
+
+ .card-case {
+   background-color: #ffffff;
+   border-radius: 12px;
+   overflow: hidden;
+   position: relative;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+ }
+
+ .card-case:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.16), 0 8px 16px -4px rgba(0, 0, 0, 0.08);
+ }
+
+ /* Barra lateral de acento — 4px, gradiente teal */
+ .card-case::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   width: 4px;
+   background: linear-gradient(180deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
+ }
+
+ /* Variante dourada — case em destaque / featured */
+ .card-case--gold::before {
+   background: linear-gradient(180deg, var(--color-gold-400) 0%, var(--color-gold-600) 100%);
+ }
+
+ /* Padding interno com folga à esquerda (clearance da barra) */
+ .card-case__content {
+   padding: 1.5rem 1.5rem 1.5rem 2rem;
+ }
+
+ /* Tag de categoria / serviço */
+ .card-case__tag {
+   display: inline-flex;
+   align-items: center;
+   font-size: 0.75rem;
+   font-weight: 600;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+   color: var(--color-accent-600);
+   background-color: var(--color-accent-50);
+   padding: 0.25rem 0.75rem;
+   border-radius: 9999px;
+   margin-bottom: 0.75rem;
+ }
+
+ /* Título do case */
+ .card-case__title {
+   font-size: 1.125rem;
+   font-weight: 700;
+   color: var(--color-secondary-900);
+   margin-bottom: 0.5rem;
+   line-height: 1.4;
+ }
+
+ /* Descrição do case */
+ .card-case__description {
+   font-size: 0.9375rem;
+   color: var(--color-secondary-600);
+   line-height: 1.6;
+ }
+
+ /* ADICIONAIS — Utilitários e refinamentos de design */
+
+ /* --- Acento Dourado --- */
+ .text-gold {
+   color: var(--color-gold-500);
+ }
+
+ .border-gold {
+   border-color: var(--color-gold-500);
+ }
+
+ .bg-gold-subtle {
+   background-color: rgba(200, 149, 42, 0.08);
+ }
+
+ /* --- Badges / Trust Indicators --- */
+
+ /* Versão para fundos escuros (Hero, seções dark) */
+ .badge-premium {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.375rem;
+   background: rgba(255, 255, 255, 0.08);
+   backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+   border: 1px solid rgba(255, 255, 255, 0.15);
+   border-radius: 9999px;
+   padding: 0.375rem 1rem;
+   font-size: 0.8125rem;
+   font-weight: 500;
+   color: inherit;
+ }
+
+ /* Variante dourada — uso em Hero para credencial CREA/MBA */
+ .badge-premium--gold {
+   border-color: rgba(200, 149, 42, 0.4);
+   background: rgba(200, 149, 42, 0.1);
+ }
+
+ /* --- Tipografia Premium --- */
+
+ /* Headline principal do Hero */
+ .heading-display {
+   font-size: clamp(2.25rem, 5vw, 3.75rem);
+   font-weight: 800;
+   letter-spacing: -0.02em;
+   line-height: 1.1;
+ }
+
+ /* Títulos de seção */
+ .heading-section {
+   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+   font-weight: 700;
+   letter-spacing: -0.015em;
+   line-height: 1.2;
+ }
+
+ /* Parágrafo de abertura / subtítulo */
+ .text-lead {
+   font-size: clamp(1rem, 2vw, 1.25rem);
+   line-height: 1.7;
+   color: var(--color-secondary-600);
+ }
+
+ /* --- Texto com Gradiente (accent) --- */
+ /* Uso: <palavra-chave> */
+ .gradient-text-accent {
+   background: linear-gradient(135deg, var(--color-accent-400) 0%, var(--color-accent-600) 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+ }
+
+ /* --- Sombra de card refinada (override do shadow-elegant) --- */
+ .shadow-card {
+   box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+ }
+
+ .shadow-card-hover {
+   box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.14), 0 6px 12px -4px rgba(0, 0, 0, 0.06);
+ }

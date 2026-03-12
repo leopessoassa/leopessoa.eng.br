@@ -38,23 +38,32 @@ export const meta: MetaFunction = () => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-sans">
       <HeroSection />
 
-      <ParaArquitetosSection />
+      <div className="section-divider section-divider--light-to-dark">
+        <ParaArquitetosSection />
+      </div>
 
       {/** <ComoFuncionaSection /> */}
-      <ProcessoSection />
 
-      <CasesReaisSection />
+      <div className="section-divider section-divider--dark-to-light section-divider--skew-reverse">
+        <ProcessoSection />
+      </div>
 
-      <SobreLeoSection />
+      <div className="section-divider section-divider--light-to-dark">
+        <CasesReaisSection />
+      </div>
+
+      <div className="section-divider section-divider--dark-to-cta section-divider--skew-reverse">
+        <SobreLeoSection />
+      </div>
 
       <VamosConversar />
 
-      {/* Footer */}
-      <footer className="bg-primary-950 text-secondary-50 py-8">
+      <footer className="bg-layer-1 text-secondary-50 py-8">
         <div className="container mx-auto px-6 text-center">
+          <div className="w-16 h-px bg-gold-500/30 mx-auto mb-4"></div>
           <p>
             © 2024 Leo Pessoa - Engenheiro Eletricista. Todos os direitos
             reservados.
