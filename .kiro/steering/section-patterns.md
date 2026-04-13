@@ -518,3 +518,295 @@ Essa alteração afeta todos os títulos de seção do site — o que é o compo
 Adicionar `overflow-x: hidden` no `html, body` resolve o scroll horizontal mas quebra o botão `ScrollToTop` (que usa `position: fixed`), fazendo-o ficar "preso" dentro do conteúdo em vez de flutuar sobre a viewport.
 
 **Solução correta para scroll horizontal:** identificar e corrigir o elemento que causa o overflow (geralmente botão com `min-width` fixo ou elemento com largura maior que a viewport), não mascarar com `overflow: hidden` no body.
+
+---
+
+## Linguagem visual B2B sofisticada — padrões aprendidos em produção
+
+### Princípio geral
+
+Para público de arquitetos e designers de interiores, **ícones Font Awesome como elemento visual principal destroem a sofisticação**. Substituir por:
+
+1. **Numeração ordinal grande** (`01`, `02`, `03`) em dourado — elemento visual âncora
+2. **Traço horizontal fino** (12–14px, 1px altura) em dourado — substitui bullets com `✓`
+3. **Barra vertical fina** (3px largura, 32–36px altura) em dourado — substitui ícones em cards
+4. **Linha dourada fina** (24–40px largura, 2px altura) — separa número/eyebrow do conteúdo
+5. **Eyebrow tipográfico** — `font-size: 11px`, `letter-spacing: 2.5px`, `text-transform: uppercase`
+
+### Painel editorial (dores vs. soluções)
+
+```css
+/* Painel branco com sombra suave — fundo off-white #f4f4f2 */
+.mainPanel {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr; /* divisor vertical de 1px */
+  gap: 0 48px;
+  background: #fff;
+  border-radius: 2px; /* cantos quase retos — mais sofisticado */
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.07);
+  padding: 48px 56px;
+}
+```
+
+Dores: numeração `01–05` em cinza claro + texto em itálico. Sem ícone, sem borda colorida.
+Soluções: barra dourada vertical de 3px + título bold + descrição cinza.
+
+### Citação tipográfica (missão/depoimento)
+
+```css
+/* Sem caixa, sem fundo — só borda esquerda dourada */
+.missao {
+  margin: 32px 0 28px;
+  padding: 0 0 0 20px;
+  border-left: 2px solid var(--b2b-accent);
+}
+```
+
+### Steps alternados com imagem
+
+Para seções de processo/etapas, alternar imagem e conteúdo a cada step:
+
+```css
+.stepRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+}
+
+/* Step par — imagem à direita via direction: rtl */
+.stepRowReversed {
+  direction: rtl;
+}
+.stepRowReversed > * {
+  direction: ltr;
+}
+```
+
+Conteúdo do step: eyebrow `CUSTO · TEMPO` em caixa alta, número ordinal opaco (opacity: 0.15) como elemento de ritmo, linha dourada, título, bullets com traço.
+
+### FAQ accordion editorial
+
+```css
+/* Toggle tipográfico — sem bolinha, sem ícone FA */
+.faqToggle {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--b2b-accent);
+  width: 24px;
+  text-align: center;
+}
+
+/* Resposta com borda esquerda dourada */
+.faqAnswer p {
+  padding-left: 20px;
+  border-left: 2px solid var(--b2b-accent);
+}
+```
+
+### Layout editorial de projetos (portfolio)
+
+Projeto destaque em grid horizontal 58/42 + projetos secundários em grid 2 colunas. Gap de 16px entre blocos — suficiente para separar sem perder coesão de galeria.
+
+```css
+.featured {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  margin-bottom: 16px; /* gap entre destaque e secundários */
+}
+
+.secondaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+```
+
+Tipo de projeto como eyebrow dourado. Specs em linha: `400m² Área · 70 Circuitos`. Tags como texto corrido separado por `/`. Sem badges coloridos, sem pílulas.
+
+### Bloco de resultados/stats
+
+```css
+/* Stats em dourado grande, separador vertical de 1px */
+.resultadosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.resultadoStat {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--b2b-accent);
+  letter-spacing: -1px;
+}
+
+.resultadoSep {
+  position: absolute;
+  left: 0; top: 0;
+  width: 1px; height: 100%;
+  background: var(--b2b-border);
+}
+```
+
+### Faixa de prova social (ProofBar)
+
+Componente de separação entre duas seções escuras. Fundo `#f4f4f2`, stats em dourado, separadores verticais de 1px.
+
+```tsx
+// Posição: entre LetsBeginSection e Footer
+<LetsBeginSection />
+<ProofBar />   {/* faixa clara de separação */}
+<Footer />
+```
+
+### Transição claro → escuro via triângulo CSS puro
+
+Para seções escuras que seguem seções claras, criar o grafismo triangular sem imagem:
+
+```css
+.triangleTop {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 120px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.triangleTop::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #f4f4f2; /* cor da seção anterior */
+  clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 0% 60%);
+}
+
+.triangleTop::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #f4f4f2;
+  clip-path: polygon(60% 100%, 100% 0%, 100% 40%);
+  opacity: 0.4;
+}
+```
+
+### Seção claro sem imagem de fundo — triângulo geométrico puro
+
+Quando a seção clara não tem foto de fundo, usar dois tons de bege para criar o triângulo visível:
+
+```css
+.imageBg {
+  background-color: #e8e6e2; /* tom levemente mais escuro que #f4f4f2 */
+  clip-path: polygon(0% 120px, 60% 60px, 100% 120px, 100% 100%, 50% 100%, 0% 100%);
+}
+
+.triangleOverlay {
+  clip-path: polygon(60% 60px, 100% 0%, 100% 120px);
+  background: rgba(212, 168, 67, 0.12); /* toque dourado sutil */
+}
+```
+
+**Nunca usar foto de fundo em seção com texto sobre ela sem overlay adequado.** A foto compete com o texto e destrói a legibilidade.
+
+### Formulário em seção escura — estilo minimalista
+
+```css
+/* Sem caixa branca — inputs com apenas border-bottom */
+.fieldInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--b2b-border);
+  color: #fff;
+  padding: 10px 0;
+}
+
+.fieldInput:focus {
+  border-bottom-color: var(--b2b-accent);
+  outline: none;
+}
+
+/* Submit dourado com texto petróleo */
+.submitBtn {
+  background: var(--b2b-accent);
+  color: var(--b2b-bg-deep);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px; /* canto quase reto */
+}
+```
+
+### Contatos como linhas simples (sem caixinhas de ícone)
+
+```css
+.contatoItem {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--b2b-border);
+}
+
+.contatoLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+  width: 100px;
+}
+
+.contatoSep {
+  width: 1px; height: 14px;
+  background: var(--b2b-border);
+  margin: 0 16px;
+}
+```
+
+### CTA de menu sofisticado (sem botão colorido)
+
+Para público B2B sofisticado, o CTA do menu não precisa de botão laranja com borda arredondada:
+
+```css
+/* "Conversar →" — texto dourado com borda inferior fina */
+.ctaBtn {
+  color: var(--b2b-accent) !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(212, 168, 67, 0.4) !important;
+  padding-bottom: 2px !important;
+  font-weight: 700 !important;
+}
+```
+
+### Linguagem de menu B2B
+
+5 itens máximo. Labels orientados ao benefício/relação, não ao conteúdo da seção:
+
+```
+O Especialista  ·  A Parceria  ·  Projetos  ·  Para Clientes ↗  ·  Conversar →
+```
+
+- Sem "O Que É Possível", "Como Funciona" — muito descritivos
+- "Conversar →" como último item já funciona como CTA — sem botão separado
+- Link externo para o outro site com ícone `↗` discreto
+
+### Footer B2B — 3 colunas, sem lista de serviços
+
+```
+Identidade (logo + descrição + credenciais)  |  Navegação  |  Contato
+```
+
+Remover coluna de "Serviços" — lista de serviços no footer é linguagem B2C. No B2B, o arquiteto já sabe o que você faz.
+
+### Tom de voz — títulos de seção
+
+Evitar títulos informais em sites B2B sofisticados. Comparação:
+
+| ❌ Informal (B2C) | ✅ Sofisticado (B2B) |
+|---|---|
+| "Café na praia para falar do próximo projeto?" | "Seu próximo projeto merece uma conversa." |
+| "Começar é fácil" | "Começar é simples" |
+| "Dúvidas? Respondidas." | "Dúvidas frequentes" |
+
+O título deve colocar o **cliente como protagonista**, não o serviço.
