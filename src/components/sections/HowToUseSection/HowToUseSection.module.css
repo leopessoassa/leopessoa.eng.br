@@ -1,0 +1,126 @@
+.howToUse {
+  position: relative;
+  padding: 180px 0;
+  margin-top: -150px;
+}
+
+/* Background Layers */
+.backgroundLayers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* style-three clip-path */
+.imageBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0% 120px, 50% 60px, 100% 0%, 100% 100%, 50% calc(100% - 60px), 0% calc(100% - 120px));
+  -webkit-clip-path: polygon(0% 120px, 50% 60px, 100% 0%, 100% 100%, 50% calc(100% - 60px), 0% calc(100% - 120px));
+}
+
+/* bg-green half-left: rgba(83,151,96,0.9) covering left 50% */
+.overlayBgGreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background-color: rgba(83, 151, 96, 0.9);
+}
+
+/* Triangle overlays — both top-right and bottom-right use the same clip-path */
+.triangleOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.topRight {
+  clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* bottom-right: same clip-path as top-right, anchored to bottom with height 120px */
+.bottomRight {
+  clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  background: rgba(255, 255, 255, 0.65);
+  height: 120px;
+  top: auto;
+  bottom: 0;
+}
+
+/* Layout */
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+/* Content Column */
+.contentColumn {
+  position: relative;
+  padding: 0 15px;
+  margin-bottom: 50px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.innerColumn {
+  position: relative;
+  padding-right: 45px;
+}
+
+/* Control Image */
+.controlImage {
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.controlImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contentColumn {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .innerColumn {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .howToUse {
+    padding: 120px 0 80px;
+  }
+}

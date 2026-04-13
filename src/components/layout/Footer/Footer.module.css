@@ -1,0 +1,239 @@
+/* ===== Footer ===== */
+.footer {
+  background: var(--b2b-bg-deep);
+  position: relative;
+}
+
+/* ===== Corpo principal ===== */
+.body {
+  padding: 80px 0 72px;
+  border-top: 1px solid var(--b2b-border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Grid de 4 colunas */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+}
+
+/* ===== Coluna 1 — Identidade ===== */
+.colIdentidade {
+  padding-right: 24px;
+}
+
+.eyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin: 0 0 12px;
+}
+
+.brand {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+/* Linha dourada — mesma linguagem de todo o projeto */
+.brandLine {
+  width: 32px;
+  height: 2px;
+  background: var(--b2b-accent);
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.brandDesc {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.credenciais {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+  margin: 0;
+}
+
+/* ===== Colunas 2 e 3 — Navegação e Serviços ===== */
+.colLabel {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--b2b-border);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navLink {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--b2b-accent);
+}
+
+.servicoItem {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+}
+
+/* ===== Coluna 4 — Contato ===== */
+.contatoList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--b2b-border);
+}
+
+.contatoLink,
+.contatoStatic {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--b2b-border);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a.contatoLink:hover {
+  opacity: 0.7;
+}
+
+.contatoLabel {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+}
+
+.contatoValue {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Redes sociais */
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLink {
+  font-size: 18px;
+  color: var(--b2b-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--b2b-accent);
+}
+
+/* ===== Rodapé ===== */
+.bottom {
+  border-top: 1px solid var(--b2b-border);
+  padding: 20px 0;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--b2b-text-muted);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.bottomBrand {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--b2b-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bottomBrand:hover {
+  color: var(--b2b-accent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .colIdentidade {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    padding: 56px 0 48px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .colIdentidade {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .bottomInner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

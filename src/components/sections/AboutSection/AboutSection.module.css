@@ -1,0 +1,388 @@
+/* =============================================
+   AboutSection
+   ============================================= */
+
+.aboutSection {
+  position: relative;
+  margin-top: -170px;
+  padding: 250px 0 120px;
+  z-index: 2;
+}
+
+/* ── Background Layers ── */
+.backgroundLayers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.imageBg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0% 120px, 65% 60px, 100% 0%, 100% 100%, 65% calc(100% - 60px), 0% calc(100% - 120px));
+  -webkit-clip-path: polygon(0% 120px, 65% 60px, 100% 0%, 100% 100%, 65% calc(100% - 60px), 0% calc(100% - 120px));
+}
+
+.overlayBgGreen {
+  position: absolute;
+  left: 0; top: 0;
+  width: 65%; height: 100%;
+  background-color: var(--b2b-overlay-section);
+}
+
+.triangleOverlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.topRight {
+  clip-path: polygon(65% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(65% 60px, 100% 0%, 100% 120px);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.bottomRight {
+  clip-path: polygon(65% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(65% 60px, 100% 0%, 100% 120px);
+  background: rgba(255, 255, 255, 0.65);
+  height: 120px;
+  top: auto;
+  bottom: 0;
+}
+
+/* ── Layout ── */
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.contentCol {
+  flex: 0 0 calc(55% - 20px);
+  max-width: calc(55% - 20px);
+  box-sizing: border-box;
+}
+
+.imageCol {
+  flex: 0 0 calc(45% - 20px);
+  max-width: calc(45% - 20px);
+  box-sizing: border-box;
+}
+
+/* ── Foto ── */
+.photoWrapper {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── Diferenciais com numeração ordinal ── */
+.diferencialList {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.diferencialItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.diferencialItem:last-child {
+  border-bottom: none;
+}
+
+.diferencialNum {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--b2b-accent);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 48px;
+  letter-spacing: -1px;
+  padding-top: 2px;
+}
+
+.diferencialContent {
+  flex: 1;
+}
+
+/* Linha dourada fina — mesma linguagem da InspirationSection */
+.diferencialLine {
+  width: 24px;
+  height: 2px;
+  background: var(--b2b-accent);
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+.diferencialTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+/* Bullets com traço dourado */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.5;
+}
+
+.bulletBar {
+  flex-shrink: 0;
+  width: 12px;
+  height: 1px;
+  background: var(--b2b-accent);
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+/* ── Missão — citação tipográfica ── */
+.missao {
+  margin: 32px 0 28px;
+  padding: 0 0 0 20px;
+  border-left: 2px solid var(--b2b-accent);
+}
+
+.missaoText {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── CTAs ── */
+.ctaBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-whatsapp);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 200ms ease, transform 200ms ease;
+  font-family: 'Catamaran', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.ctaPrimary:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.ctaPrimary i {
+  font-size: 22px;
+}
+
+.ctaMicrocopy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.ctaSecondary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color 200ms ease;
+  padding-bottom: 1px;
+}
+
+.ctaSecondary:hover {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.ctaMicrocopySecondary {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+/* ── Por que arquitetos escolhem Leo ── */
+.porqueBox {
+  background: #fff;
+  border-radius: 2px;
+  padding: 28px 28px 24px;
+  margin-top: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Eyebrow — mesma linguagem da InspirationSection */
+.porqueEyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-bg-section);
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.porqueList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.porqueItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.porqueItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Barra dourada — mesma linguagem da InspirationSection */
+.porqueBar {
+  flex-shrink: 0;
+  width: 3px;
+  height: 32px;
+  background: var(--b2b-accent);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.porqueItemTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 3px;
+}
+
+.porqueItemDesc {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 991px) {
+  .aboutSection {
+    margin-top: -100px;
+    padding: 160px 0 120px;
+  }
+
+  .overlayBgGreen {
+    width: 100%;
+    background-color: var(--b2b-overlay-section);
+  }
+
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .contentCol,
+  .imageCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .photoWrapper {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    margin-top: -60px;
+    padding: 110px 0 125px;
+  }
+
+  .ctaPrimary {
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    padding: 14px 24px;
+  }
+
+  .diferencialNum {
+    font-size: 28px;
+    width: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    margin-top: -40px;
+    padding: 100px 0 130px;
+  }
+}

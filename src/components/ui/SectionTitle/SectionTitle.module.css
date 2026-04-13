@@ -1,0 +1,53 @@
+.sectionTitle {
+  margin-bottom: 30px;
+}
+
+.sectionTitle h2 {
+  position: relative;
+  display: block;
+  font-size: 60px;
+  line-height: 1.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #363636;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle h2 {
+    font-size: 30px;
+  }
+}
+
+.sectionTitle p {
+  position: relative;
+  margin-top: 24px;
+  font-size: 16px;
+  color: #777;
+}
+
+.light h2 {
+  color: #ffffff;
+}
+
+.light p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}

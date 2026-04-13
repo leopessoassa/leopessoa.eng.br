@@ -1,0 +1,600 @@
+/* ─── Section wrapper ─────────────────────────────────── */
+.section {
+  position: relative;
+  padding: 100px 0 100px;
+}
+
+/* ─── Background layers ───────────────────────────────── */
+.backgroundLayers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.imageBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: polygon(0% 120px, 50% 60px, 100% 120px, 100% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  -webkit-clip-path: polygon(0% 120px, 50% 60px, 100% 120px, 100% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+}
+
+.overlayBgGreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(83, 151, 96, 0.92);
+}
+
+.triangleOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.topLeft {
+  clip-path: polygon(0% 0%, 50% 60px, 0% 120px);
+  -webkit-clip-path: polygon(0% 0%, 50% 60px, 0% 120px);
+  background-color: #cfddd0;
+}
+
+.topRight {
+  clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  background: #51945d;
+}
+
+.bottomLeft {
+  clip-path: polygon(0% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  -webkit-clip-path: polygon(0% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  background: rgba(130, 177, 138, 0.7);
+  height: 120px;
+  top: auto;
+  bottom: 0;
+}
+
+.bottomRight {
+  clip-path: polygon(50% calc(100% - 60px), 100% calc(100% - 120px), 100% 100%);
+  -webkit-clip-path: polygon(50% calc(100% - 60px), 100% calc(100% - 120px), 100% 100%);
+  background: #51945d;
+  height: 120px;
+  top: auto;
+  bottom: 0;
+}
+
+/* ─── Content wrapper (above background) ─────────────── */
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── Plans grid (3 cards) ────────────────────────────── */
+.plansGrid {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 50px;
+  margin-bottom: 32px;
+}
+
+/* ─── Plan card ───────────────────────────────────────── */
+.planCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.planCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.planCardFeatured {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+}
+
+.planCardFeatured:hover {
+  transform: translateY(-12px);
+}
+
+/* ─── Popular badge ───────────────────────────────────── */
+.popularBadge {
+  background: var(--color-accent, #ff6c3a);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 6px 12px;
+}
+
+.popularBadge i {
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+/* ─── Card header ─────────────────────────────────────── */
+.cardHeader {
+  padding: 32px 28px 24px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-primary, #59ab66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.iconWrap .icon {
+  font-size: 28px;
+  color: #fff;
+  line-height: 1;
+}
+
+.planName {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text, #363636);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 4px;
+}
+
+.planTagline {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+/* ─── Card body ───────────────────────────────────────── */
+.cardBody {
+  padding: 24px 28px;
+  flex: 1;
+}
+
+.listLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aaa;
+  margin: 0 0 10px;
+}
+
+.featureList,
+.idealList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.featureList li,
+.idealList li {
+  font-size: 14px;
+  color: #555;
+  padding: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.featureList li i {
+  color: var(--color-primary, #59ab66);
+  font-size: 12px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.idealList li i {
+  color: var(--color-accent, #ff6c3a);
+  font-size: 12px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ─── Card footer ─────────────────────────────────────── */
+.cardFooter {
+  padding: 20px 28px 28px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.priceRange {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary, #59ab66);
+  margin-bottom: 6px;
+}
+
+.installments {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.installments i {
+  margin-right: 4px;
+}
+
+.bonus {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent, #ff6c3a);
+  margin-bottom: 16px;
+}
+
+.bonus i {
+  margin-right: 4px;
+}
+
+.ctaWrap {
+  margin-top: 16px;
+}
+
+/* ─── Custom band ─────────────────────────────────────── */
+/* Fundo escuro semitransparente para contrastar com o verde da seção */
+.customBand {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 40px 48px;
+  margin-bottom: 40px;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.customLeft {
+  display: flex;
+  gap: 28px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.customIconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.customIconWrap i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.customText {
+  flex: 1;
+}
+
+.customTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 2px;
+}
+
+.customSubtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 12px;
+}
+
+.customDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.customFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+}
+
+.customFeatures li {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.88);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.customFeatures li i {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.customRight {
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 220px;
+}
+
+.customPrice {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.customInstallments {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 20px;
+}
+
+.customInstallments i {
+  margin-right: 4px;
+}
+
+.customMicro {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* ─── Comparison toggle ───────────────────────────────── */
+.comparisonSection {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.toggleBtn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggleBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.toggleBtn i {
+  font-size: 14px;
+}
+
+/* ─── Comparison table ────────────────────────────────── */
+.tableWrap {
+  margin-top: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+}
+
+.compTable {
+  width: 100%;
+  min-width: 560px; /* garante scroll horizontal antes de comprimir demais */
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: center;
+}
+
+.compTable thead tr {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.compTable th {
+  padding: 14px 16px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.thFeatured {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.compTable tbody tr {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.compTable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.compTable td {
+  padding: 12px 16px;
+  color: #444;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tdFeature {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-text, #363636);
+}
+
+.tdFeatured {
+  font-weight: 600;
+  color: var(--color-primary, #59ab66);
+}
+
+.tdCustom {
+  font-style: italic;
+  color: #777;
+}
+
+.trPrice td {
+  font-weight: 700;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-text, #363636);
+}
+
+.trPrice .tdFeatured {
+  color: var(--color-primary, #59ab66);
+}
+
+/* ─── Final CTA ───────────────────────────────────────── */
+.finalCta {
+  text-align: center;
+  padding: 48px 0 0;
+}
+
+.finalCtaText {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.finalCtaMicro {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 991px) {
+  .plansGrid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .planCardFeatured {
+    transform: none;
+    order: -1;
+  }
+
+  .planCardFeatured:hover {
+    transform: translateY(-4px);
+  }
+
+  .customBand {
+    flex-direction: column;
+    padding: 32px 28px;
+    gap: 28px;
+  }
+
+  .customRight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0 80px;
+  }
+
+  .customLeft {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .customIconWrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .customIconWrap i {
+    font-size: 22px;
+  }
+
+  .customFeatures {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardHeader {
+    padding: 24px 20px 18px;
+  }
+
+  .cardBody {
+    padding: 18px 20px;
+  }
+
+  .cardFooter {
+    padding: 16px 20px 22px;
+  }
+
+  .customBand {
+    padding: 24px 20px;
+  }
+
+  .customRight {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .priceRange {
+    font-size: 18px;
+  }
+
+  .finalCtaText {
+    font-size: 20px;
+  }
+
+  .finalCta :global(.btn-style-one),
+  .finalCta :global(.btn-style-two),
+  .customRight :global(.btn-style-one),
+  .customRight :global(.btn-style-two) {
+    white-space: normal;
+    word-break: break-word;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

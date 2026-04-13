@@ -1,0 +1,13 @@
+/* Base wrapper — visual styles come from the global btn-style-* classes */
+.themeBtn {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.large {
+  padding: 12px 70px 10px;
+  min-width: 215px;
+  font-size: 16px;
+  line-height: 23px;
+}

@@ -1,0 +1,122 @@
+/* Callback Section */
+.callbackSection {
+  position: relative;
+  padding: 60px 0 120px;
+}
+
+.bgImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Section title — visual styles come from global .sec-title */
+.secTitle {
+  margin-bottom: 30px;
+}
+
+/* Callback form box */
+.callbackForm {
+  background-color: #fff;
+  box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  padding: 30px 30px 20px 30px;
+}
+
+/* Form fields */
+.formGroup {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.formGroup:last-child {
+  margin-bottom: 0;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #363636;
+  margin-bottom: 0;
+}
+
+.formGroup input,
+.formGroup textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #e0e6ea;
+  border-radius: 2px;
+  height: 42px;
+  transition: all 300ms ease;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #59ab66;
+}
+
+.formGroup textarea {
+  height: 250px;
+  resize: none;
+}
+
+.fieldError {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #e74c3c;
+}
+
+.networkError {
+  padding: 10px 15px;
+  margin-bottom: 18px;
+  background-color: #fdf2f2;
+  border: 1px solid #e74c3c;
+  border-radius: 3px;
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.successMessage {
+  padding: 15px 20px;
+  background-color: #f0faf2;
+  border: 1px solid #59ab66;
+  border-radius: 3px;
+  color: #2d7a3a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.submitBtn {
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+  .callbackSection {
+    padding: 60px 0 80px;
+  }
+}

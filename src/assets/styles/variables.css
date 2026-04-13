@@ -1,0 +1,89 @@
+/* CSS Custom Properties extracted from the Ingenious template */
+
+:root {
+  /* ── B2C palette (casainteligente — verde) ─────────────────────────────── */
+  --color-primary: #59ab66;       /* main green */
+  --color-primary-dark: #529b6b;  /* darker green */
+  --color-accent: #fcb43c;        /* amber accent — brand color */
+  --color-blue: #00bdbd;          /* teal blue — standardized UI accent */
+
+  /* ── B2B palette (parceiros — azul petróleo) ───────────────────────────── */
+  /* Fundos e overlays de seção */
+  --b2b-bg-deep:    #0b1f2a;      /* fundo mais profundo — hero/contato */
+  --b2b-bg-section: #0f2535;      /* fundo padrão de seção escura */
+  --b2b-bg-overlay: rgba(11, 31, 42, 0.88);   /* overlay sobre foto */
+  --b2b-bg-card:    rgba(255, 255, 255, 0.07); /* card sobre fundo escuro */
+  --b2b-bg-card-hover: rgba(255, 255, 255, 0.12);
+
+  /* Overlay verde → petróleo (substitui rgba(83,151,96,0.9) nas seções) */
+  --b2b-overlay-section: rgba(11, 31, 42, 0.92);
+
+  /* Accent dourado — substitui laranja/âmbar no contexto B2B */
+  --b2b-accent:      #d4a843;     /* dourado elegante */
+  --b2b-accent-dark: #b8902e;     /* dourado escuro (hover) */
+  --b2b-accent-bg:   rgba(212, 168, 67, 0.15); /* fundo suave dourado */
+
+  /* Texto sobre fundo escuro */
+  --b2b-text-primary:  #ffffff;
+  --b2b-text-secondary: rgba(255, 255, 255, 0.75);
+  --b2b-text-muted:     rgba(255, 255, 255, 0.50);
+
+  /* Bordas e separadores */
+  --b2b-border:       rgba(255, 255, 255, 0.12);
+  --b2b-border-light: rgba(255, 255, 255, 0.06);
+
+  /* Verde mantido para CTAs e checkmarks (identidade Leo Pessoa) */
+  --b2b-cta-green:   #59ab66;
+  --b2b-cta-green-dark: #4a9457;
+
+  /* WhatsApp — mantido universal */
+  --color-whatsapp:  #25d366;
+  --color-whatsapp-dark: #1ebe5d;
+
+  /* ── Cores compartilhadas ──────────────────────────────────────────────── */
+  --color-text: #363636;          /* body text */
+  --color-text-muted: #4b4342;    /* muted text */
+  --color-white: #ffffff;
+  --color-bg: #ffffff;
+  --color-border: #e0e6ea;
+  --color-border-light: #f1f1f1;
+  --color-sky: #009de6;
+  --color-purple: #6770b9;
+  --color-pink: #fa3138;
+  --color-orange: #f87208;
+  --color-caribbean: #03c8ad;
+  --color-dark: #464646;
+  --color-success: #59ab66;
+  --color-warning: #fad10f;
+  --color-error: #f3413f;
+  --color-info: #2f94ce;
+
+  /* Typography */
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Catamaran', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 28px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 50px;
+
+  /* Container */
+  --container-max-width: 1200px;
+  --container-padding: 15px;
+
+  /* Border radius */
+  --border-radius-pill: 30px;
+
+  /* Transitions */
+  --transition-base: all 0.5s ease;
+  --transition-fast: all 300ms ease;
+}

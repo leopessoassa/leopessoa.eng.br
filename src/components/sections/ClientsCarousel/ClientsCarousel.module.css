@@ -1,0 +1,38 @@
+.clientsSection {
+  position: relative;
+  padding: 50px 0;
+  background-color: #539760;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.slideItem {
+  position: relative;
+}
+
+.imageBox {
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.imageBox a {
+  display: inline-block;
+}
+
+.imageBox img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  transition: all 300ms ease;
+}
+
+.imageBox a:hover img {
+  opacity: 0.8;
+}

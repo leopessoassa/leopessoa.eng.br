@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://leopessoa.eng.br/sitemap.xml

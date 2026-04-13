@@ -1,0 +1,350 @@
+/* ===== Section ===== */
+.section {
+  position: relative;
+  padding: 80px 0 0;
+  background-color: #f4f4f2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== Steps alternados ===== */
+.stepsList {
+  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.stepRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+}
+
+/* Step par — imagem à direita */
+.stepRowReversed {
+  direction: rtl;
+}
+
+.stepRowReversed > * {
+  direction: ltr;
+}
+
+/* ── Imagem ── */
+.stepImageWrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.stepImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.stepRow:hover .stepImage {
+  transform: scale(1.03);
+}
+
+/* ── Conteúdo ── */
+.stepContent {
+  background: #fff;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* Meta — custo e tempo como eyebrow */
+.stepMeta {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.stepCost {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+}
+
+.stepMetaSep {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: #ccc;
+  margin: 0 12px;
+}
+
+.stepTime {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+/* Número ordinal + linha — mesma linguagem das seções anteriores */
+.stepHead {
+  margin-bottom: 12px;
+}
+
+.stepNum {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--b2b-bg-section);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  opacity: 0.15;
+}
+
+.stepLine {
+  width: 32px;
+  height: 2px;
+  background: var(--b2b-accent);
+  opacity: 0.6;
+}
+
+.stepTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--b2b-bg-section);
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+/* Bullets com traço dourado — mesma linguagem das seções anteriores */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.bulletBar {
+  flex-shrink: 0;
+  width: 14px;
+  height: 1px;
+  background: var(--b2b-accent);
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+/* Nota final */
+.stepsNote {
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
+  color: #aaa;
+  letter-spacing: 0.3px;
+  padding: 32px 0 64px;
+  border-top: 1px solid #e8e8e8;
+  margin-top: 0;
+}
+
+/* ===== FAQ ===== */
+.faqSection {
+  background: var(--b2b-bg-section);
+  padding: 64px 56px;
+}
+
+/* Eyebrow — mesma linguagem das seções anteriores */
+.faqEyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.faqList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--b2b-border);
+}
+
+.faqItem:first-child {
+  border-top: 1px solid var(--b2b-border);
+}
+
+.faqBtn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faqQuestion {
+  flex: 1;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.faqBtn:hover .faqQuestion {
+  color: var(--b2b-accent);
+}
+
+.faqBtnOpen .faqQuestion {
+  color: var(--b2b-accent);
+}
+
+.faqShort {
+  font-size: 13px;
+  color: var(--b2b-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Toggle tipográfico — sem bolinha, sem ícone FA */
+.faqToggle {
+  flex-shrink: 0;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--b2b-accent);
+  line-height: 1;
+  width: 24px;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+/* Resposta — borda esquerda dourada, mesma linguagem da missão na AboutSection */
+.faqAnswer {
+  padding: 0 0 24px 0;
+  animation: fadeIn 0.2s ease;
+}
+
+.faqAnswer p {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.75;
+  margin: 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--b2b-accent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .stepRow {
+    grid-template-columns: 1fr 1fr;
+    min-height: 280px;
+  }
+
+  .stepContent {
+    padding: 36px 32px;
+  }
+
+  .faqSection {
+    padding: 48px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0 0;
+  }
+
+  .stepRow,
+  .stepRowReversed {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    min-height: auto;
+  }
+
+  .stepRowReversed > * {
+    direction: ltr;
+  }
+
+  .stepImageWrap {
+    height: 240px;
+  }
+
+  .stepContent {
+    padding: 28px 24px;
+  }
+
+  .stepTitle {
+    font-size: 20px;
+  }
+
+  .faqSection {
+    padding: 40px 20px;
+  }
+
+  .faqShort {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stepImageWrap {
+    height: 200px;
+  }
+
+  .stepContent {
+    padding: 24px 20px;
+  }
+
+  .stepNum {
+    font-size: 40px;
+  }
+
+  .faqSection {
+    padding: 32px 16px;
+  }
+
+  .faqQuestion {
+    font-size: 15px;
+  }
+}

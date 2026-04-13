@@ -1,0 +1,221 @@
+/* Portfolio Section */
+.portfolioSection {
+  position: relative;
+  margin-top: -120px;
+  padding: 180px 0 150px;
+  z-index: 3;
+}
+
+/* Background layers */
+.backgroundLayers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.imageBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: polygon(0% 120px, 50% 60px, 100% 120px, 100% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  -webkit-clip-path: polygon(0% 120px, 50% 60px, 100% 120px, 100% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+}
+
+.overlayBgGreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(83, 151, 96, 0.9);
+}
+
+.triangleOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.topLeft {
+  clip-path: polygon(0% 0%, 50% 60px, 0% 120px);
+  -webkit-clip-path: polygon(0% 0%, 50% 60px, 0% 120px);
+  background-color: #cfddd0;
+}
+
+.topRight {
+  clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  background: #51945d;
+}
+
+.bottomLeft {
+  clip-path: polygon(0% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  -webkit-clip-path: polygon(0% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  background: rgba(130, 177, 138, 0.7);
+  height: 120px;
+  top: auto;
+  bottom: 0;
+}
+
+/* Container */
+.containerFluid {
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+.carouselOuter {
+  position: relative;
+  padding: 0 10px;
+}
+
+/* Portfolio Block */
+.portfolioBlock {
+  position: relative;
+}
+
+.innerBox {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.imageBox {
+  position: relative;
+}
+
+.image {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay */
+.overlay,
+.overlay a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(86, 168, 99, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+}
+
+.innerBox:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlayIcon {
+  color: #363636;
+  font-size: 20px;
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transform: translateY(-10px);
+  transition: all 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerBox:hover .overlayIcon {
+  transform: translateY(0px);
+}
+
+/* Lower Content */
+.lowerContent {
+  position: relative;
+  padding-top: 20px;
+}
+
+.lowerContent h4 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0 0 3px;
+}
+
+.lowerContent h4 a {
+  color: #ffffff;
+  transition: all 300ms ease;
+}
+
+.lowerContent h4 a:hover {
+  opacity: 0.8;
+}
+
+.cat,
+.cat a {
+  position: relative;
+  font-size: 17px;
+  margin: 3px 0;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* Swiper pagination — white dots like the template */
+:global(.portfolio-swiper .swiper-pagination-bullet),
+:global(.swiper-pagination-bullet) {
+  position: relative;
+  display: inline-block;
+  margin: 3px 6px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff;
+  opacity: 1;
+  vertical-align: middle;
+  transition: all 200ms ease;
+}
+
+:global(.portfolio-swiper .swiper-pagination-bullet-active),
+:global(.swiper-pagination-bullet-active) {
+  border-width: 3px;
+  width: 18px;
+  height: 18px;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+}
+
+:global(.swiper-pagination) {
+  margin-top: 40px;
+  position: relative;
+  bottom: auto;
+}

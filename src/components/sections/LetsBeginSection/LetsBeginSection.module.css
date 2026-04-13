@@ -1,0 +1,438 @@
+/* ===== Section ===== */
+.section {
+  position: relative;
+  padding: 120px 0 100px;
+  overflow: hidden;
+}
+
+/* ── Fundo ── */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.08; /* muito sutil — só textura, não compete */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--b2b-bg-deep);
+}
+
+/* ── Grafismo triangular de entrada ── */
+/* Triângulo que cobre o topo da seção, criando a transição do #f4f4f2 para o petróleo */
+.triangleTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 120px;
+  pointer-events: none;
+}
+
+.triangleTop::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #f4f4f2; /* mesma cor do fundo da GettingStartedSection */
+  clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 0% 60%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 0% 60%);
+}
+
+.triangleTop::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #f4f4f2;
+  clip-path: polygon(60% 100%, 100% 0%, 100% 40%);
+  -webkit-clip-path: polygon(60% 100%, 100% 0%, 100% 40%);
+  opacity: 0.4;
+}
+
+/* ===== Container ===== */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Grid assimétrico ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ===== Coluna esquerda ===== */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 8px;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin: 0 0 16px;
+}
+
+/* Headline */
+.headline {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.headlineAccent {
+  color: var(--b2b-accent);
+}
+
+/* Linha dourada — mesma linguagem das seções anteriores */
+.headlineLine {
+  width: 40px;
+  height: 2px;
+  background: var(--b2b-accent);
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.subheadline {
+  font-size: 15px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.75;
+  margin: 0 0 40px;
+}
+
+/* ── O que esperar ── */
+.esperaBlock {
+  margin-bottom: 36px;
+}
+
+.blockEyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+  margin: 0 0 16px;
+}
+
+.esperaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.esperaItem {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.5;
+}
+
+/* Traço dourado — mesma linguagem das seções anteriores */
+.esperaBar {
+  flex-shrink: 0;
+  width: 14px;
+  height: 1px;
+  background: var(--b2b-accent);
+  opacity: 0.6;
+  margin-bottom: 2px;
+}
+
+/* ── Contatos como linhas simples ── */
+.contatosList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 32px;
+  border-top: 1px solid var(--b2b-border);
+}
+
+.contatoItem {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--b2b-border);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a.contatoItem:hover {
+  opacity: 0.75;
+}
+
+.contatoLabel {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.contatoSep {
+  width: 1px;
+  height: 14px;
+  background: var(--b2b-border);
+  margin: 0 16px;
+  flex-shrink: 0;
+}
+
+.contatoValue {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* ── WhatsApp CTA ── */
+.whatsappCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-whatsapp);
+  color: #fff;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  align-self: flex-start;
+}
+
+.whatsappCta:hover {
+  background: var(--color-whatsapp-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.whatsappCta i {
+  font-size: 20px;
+}
+
+/* ===== Coluna direita — formulário ===== */
+.formCol {
+  /* sem padding extra — o formWrap cuida disso */
+}
+
+.formWrap {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--b2b-border);
+  padding: 48px 48px 44px;
+}
+
+.formEyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin: 0 0 8px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: var(--b2b-text-muted);
+  margin: 0 0 36px;
+}
+
+/* ── Campos ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+}
+
+.fieldInput,
+.fieldTextarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--b2b-border);
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.fieldInput::placeholder,
+.fieldTextarea::placeholder {
+  color: var(--b2b-text-muted);
+  font-size: 14px;
+}
+
+.fieldInput:focus,
+.fieldTextarea:focus {
+  border-bottom-color: var(--b2b-accent);
+}
+
+.fieldInputError {
+  border-bottom-color: #e74c3c;
+}
+
+.fieldTextarea {
+  resize: none;
+  height: 100px;
+}
+
+.fieldError {
+  font-size: 12px;
+  color: #e74c3c;
+  margin: 0;
+}
+
+/* ── Submit ── */
+.submitBtn {
+  align-self: flex-start;
+  background: var(--b2b-accent);
+  color: var(--b2b-bg-deep);
+  font-family: 'Catamaran', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--b2b-accent-dark);
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Feedback ── */
+.errorMsg {
+  font-size: 13px;
+  color: #e74c3c;
+  margin: 0;
+  padding: 12px 16px;
+  border-left: 2px solid #e74c3c;
+}
+
+.successMsg {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px 0;
+}
+
+.successIcon {
+  font-size: 28px;
+  color: var(--b2b-accent);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.successTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.successDesc {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .headline {
+    font-size: 30px;
+  }
+
+  .formWrap {
+    padding: 36px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 100px 0 80px;
+  }
+
+  .headline {
+    font-size: 26px;
+  }
+
+  .formWrap {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 0 60px;
+  }
+
+  .headline {
+    font-size: 24px;
+  }
+
+  .submitBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

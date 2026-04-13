@@ -1,0 +1,297 @@
+/* ===== Section — fundo claro com grafismo triangular ===== */
+.section {
+  position: relative;
+  margin-top: -190px;
+  padding: 200px 0 0;
+  z-index: 2;
+}
+
+/* Fundo off-white começa abaixo dos triângulos */
+.section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  height: calc(100% - 120px);
+  background-color: #f4f4f2;
+  z-index: -1;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Background Layers ===== */
+.backgroundLayers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* Sem imagem de fundo — triângulo geométrico puro */
+.imageBg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: #e8e6e2; /* tom levemente mais escuro que o fundo — cria o triângulo visível */
+  clip-path: polygon(0% 120px, 60% 60px, 100% 120px, 100% 100%, 50% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 120px, 60% 60px, 100% 120px, 100% 100%, 50% 100%, 0% 100%);
+}
+
+.triangleOverlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  clip-path: polygon(60% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(60% 60px, 100% 0%, 100% 120px);
+  background: rgba(212, 168, 67, 0.12); /* toque dourado sutil no triângulo decorativo */
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px 0;
+}
+
+/* ===== Linha do tempo ===== */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 56px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* ===== Etapa ===== */
+.etapa {
+  position: relative;
+  padding: 0 32px 48px 0;
+}
+
+.etapa:last-child {
+  padding-right: 0;
+}
+
+/* Linha conectora horizontal entre etapas */
+.connector {
+  position: absolute;
+  top: 28px; /* alinhado ao centro do número */
+  right: 0;
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to right, var(--b2b-accent), rgba(212, 168, 67, 0.2));
+}
+
+/* Cabeçalho da etapa: número + linha */
+.etapaHead {
+  margin-bottom: 16px;
+}
+
+.etapaNum {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--b2b-accent);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+
+/* Linha dourada fina — mesma linguagem das seções anteriores */
+.etapaLine {
+  width: 32px;
+  height: 2px;
+  background: var(--b2b-bg-section);
+  opacity: 0.25;
+}
+
+.etapaTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--b2b-bg-section);
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.etapaDesc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+
+/* Bullets com traço dourado — mesma linguagem das seções anteriores */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.bulletBar {
+  flex-shrink: 0;
+  width: 12px;
+  height: 1px;
+  background: var(--b2b-accent);
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+/* ===== CTA Banner petróleo ===== */
+.ctaBanner {
+  background: var(--b2b-bg-section);
+  margin-top: 0;
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaEyebrow {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin-bottom: 10px;
+}
+
+.ctaTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.ctaDesc {
+  font-size: 15px;
+  color: var(--b2b-text-secondary);
+  margin: 0;
+}
+
+.ctaAction {
+  flex-shrink: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .section {
+    margin-top: -120px;
+    padding: 140px 0 0;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .etapa {
+    padding: 0 24px 40px 0;
+  }
+
+  .etapa:nth-child(2) {
+    padding-right: 0;
+  }
+
+  .etapa:nth-child(3) {
+    padding-right: 24px;
+  }
+
+  /* Esconder conectores no grid 2x2 */
+  .connector {
+    display: none;
+  }
+
+  .ctaBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: -190px;
+    padding: 110px 0 0;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .etapa {
+    padding: 0 16px 32px 0;
+  }
+
+  .etapa:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .etapaNum {
+    font-size: 40px;
+  }
+
+  .ctaBanner {
+    padding: 32px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: -120px;
+    padding: 120px 0 0;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .etapa {
+    padding: 0 0 32px 0;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 8px;
+  }
+
+  .etapa:last-child {
+    border-bottom: none;
+  }
+
+  .ctaBanner {
+    padding: 28px 16px;
+  }
+}

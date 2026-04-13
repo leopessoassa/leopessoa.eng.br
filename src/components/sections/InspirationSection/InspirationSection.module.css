@@ -1,0 +1,353 @@
+/* ─── Section ─────────────────────────────────────────────────────────────── */
+.section {
+  position: relative;
+  margin-top: -190px;
+  padding: 200px 0 80px;
+  z-index: 2;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  height: calc(100% - 120px);
+  background-color: #f4f4f2; /* off-white levemente quente — mais sofisticado que #f8f8f8 */
+  z-index: -1;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Background Layers ────────────────────────────────────────────────────── */
+.backgroundLayers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.imageBg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0% 120px, 60% 60px, 100% 120px, 100% 100%, 50% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 120px, 60% 60px, 100% 120px, 100% 100%, 50% 100%, 0% 100%);
+}
+
+.triangleOverlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  clip-path: polygon(60% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(60% 60px, 100% 0%, 100% 120px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ─── Painel principal ─────────────────────────────────────────────────────── */
+.mainPanel {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 48px;
+  margin-bottom: 56px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.07);
+  padding: 48px 56px;
+}
+
+/* Label de coluna — estilo editorial */
+.colLabel {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-bg-section);
+  margin: 0 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* ─── Divisor vertical ─────────────────────────────────────────────────────── */
+.divider {
+  width: 1px;
+  background: #e8e8e8;
+  align-self: stretch;
+}
+
+/* ─── Dores ────────────────────────────────────────────────────────────────── */
+.doresCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.doresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.doreItem {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.doreItem:last-child {
+  border-bottom: none;
+}
+
+.doreNum {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #c8c8c8;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.doreText {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ─── Soluções ─────────────────────────────────────────────────────────────── */
+.solucoesCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.solucoesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.solucaoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.solucaoItem:last-child {
+  border-bottom: none;
+}
+
+/* Barra dourada fina — substitui ícone */
+.solucaoBar {
+  flex-shrink: 0;
+  width: 3px;
+  height: 36px;
+  background: var(--b2b-accent);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.solucaoTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 3px;
+  line-height: 1.2;
+}
+
+.solucaoDesc {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ─── Bloco Diferencial Técnico ────────────────────────────────────────────── */
+.diferencialBlock {
+  background: var(--b2b-bg-section);
+  border-radius: 2px;
+  padding: 56px 56px 48px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.diferencialIntro {
+  margin-bottom: 48px;
+}
+
+.diferencialEyebrow {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin-bottom: 16px;
+}
+
+.diferencialTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Grid com 3 colunas separadas por linha */
+.diferencialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-bottom: 48px;
+  border-top: 1px solid var(--b2b-border);
+}
+
+.diferencialItem {
+  padding: 32px 40px 32px 0;
+  border-right: 1px solid var(--b2b-border);
+  padding-right: 40px;
+}
+
+.diferencialItem:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+.diferencialItem:nth-child(2) {
+  padding-left: 40px;
+}
+
+/* Número ordinal grande — elemento visual principal */
+.diferencialNum {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--b2b-accent);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+/* Linha dourada fina abaixo do número */
+.diferencialLine {
+  width: 32px;
+  height: 2px;
+  background: var(--b2b-accent);
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.diferencialItemTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.diferencialItemDesc {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  margin: 0;
+  line-height: 1.65;
+}
+
+.diferencialCta {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8px;
+  border-top: 1px solid var(--b2b-border);
+}
+
+/* ─── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .section {
+    margin-top: -120px;
+    padding: 140px 0 60px;
+  }
+
+  .mainPanel {
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+    padding: 36px 32px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .diferencialBlock {
+    padding: 40px 32px 36px;
+  }
+
+  .diferencialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .diferencialItem,
+  .diferencialItem:last-child,
+  .diferencialItem:nth-child(2) {
+    padding: 28px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--b2b-border);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .diferencialItem:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: -190px;
+    padding: 110px 0 60px;
+  }
+
+  .mainPanel {
+    padding: 28px 20px;
+  }
+
+  .diferencialBlock {
+    padding: 32px 20px 28px;
+  }
+
+  .diferencialTitle {
+    font-size: 22px;
+  }
+
+  .diferencialNum {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: -120px;
+    padding: 120px 0 60px;
+  }
+}

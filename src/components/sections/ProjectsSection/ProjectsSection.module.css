@@ -1,0 +1,461 @@
+/* ===== Section ===== */
+.section {
+  position: relative;
+  margin-top: -75px;
+  padding: 180px 0 0;
+  z-index: 3;
+}
+
+/* ===== Background layers ===== */
+.backgroundLayers {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+}
+
+.imageBg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: polygon(0% 120px, 50% 60px, 100% 120px, 100% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  -webkit-clip-path: polygon(0% 120px, 50% 60px, 100% 120px, 100% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+}
+
+.overlayBg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--b2b-overlay-section);
+}
+
+.triangleOverlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.topLeft {
+  clip-path: polygon(0% 0%, 50% 60px, 0% 120px);
+  -webkit-clip-path: polygon(0% 0%, 50% 60px, 0% 120px);
+  background-color: rgba(11, 31, 42, 0.5);
+}
+
+.topRight {
+  clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  -webkit-clip-path: polygon(50% 60px, 100% 0%, 100% 120px);
+  background: rgba(11, 31, 42, 0.8);
+}
+
+.bottomLeft {
+  clip-path: polygon(0% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  -webkit-clip-path: polygon(0% calc(100% - 120px), 50% calc(100% - 60px), 0% 100%);
+  background: rgba(11, 31, 42, 0.4);
+  height: 120px;
+  top: auto; bottom: 0;
+}
+
+/* ===== Container ===== */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Elementos de projeto compartilhados ===== */
+
+/* Eyebrow de tipo */
+.projectType {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin: 0 0 8px;
+}
+
+/* Linha divisória dourada fina */
+.dividerLine {
+  width: 32px;
+  height: 1px;
+  background: var(--b2b-accent);
+  opacity: 0.5;
+  margin: 14px 0;
+}
+
+/* Specs em linha horizontal */
+.specsRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.specGroup {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.specValue {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 4px;
+}
+
+.specLabel {
+  font-size: 12px;
+  color: var(--b2b-text-muted);
+  text-transform: lowercase;
+}
+
+.specSep {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: var(--b2b-border);
+  margin: 0 14px;
+}
+
+/* Tags como texto corrido */
+.tagsLine {
+  font-size: 12px;
+  color: var(--b2b-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* ===== Projeto destaque — horizontal ===== */
+.featured {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.featuredImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredImg {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.featured:hover .featuredImg {
+  transform: scale(1.03);
+}
+
+.featuredContent {
+  background: var(--b2b-bg-card);
+  border: 1px solid var(--b2b-border);
+  border-left: none;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.projectLocation {
+  font-size: 13px;
+  color: var(--b2b-text-muted);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.projectDesc {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+/* ===== Grid secundário — 2 colunas ===== */
+.secondaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.secondaryCard {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  overflow: hidden;
+}
+
+.secondaryImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.secondaryImg {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.secondaryCard:hover .secondaryImg {
+  transform: scale(1.04);
+}
+
+.secondaryContent {
+  background: var(--b2b-bg-card);
+  border: 1px solid var(--b2b-border);
+  border-left: none;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectTitleSm {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.projectDescSm {
+  font-size: 13px;
+  color: var(--b2b-text-secondary);
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+/* ===== Resultados ===== */
+.resultados {
+  border-top: 1px solid var(--b2b-border);
+  padding: 48px 0;
+}
+
+.resultadosEyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-text-muted);
+  margin: 0 0 36px;
+  text-align: center;
+}
+
+.resultadosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.resultadoItem {
+  text-align: center;
+  padding: 0 40px;
+  position: relative;
+}
+
+/* Separador vertical entre itens */
+.resultadoSep {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--b2b-border);
+}
+
+/* Stat em dourado grande */
+.resultadoStat {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--b2b-accent);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.resultadoLine {
+  width: 24px;
+  height: 1px;
+  background: var(--b2b-accent);
+  opacity: 0.4;
+  margin: 0 auto 12px;
+}
+
+.resultadoDesc {
+  font-size: 14px;
+  color: var(--b2b-text-secondary);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ===== CTA banner ===== */
+.cta {
+  background: var(--b2b-bg-deep);
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-top: 1px solid var(--b2b-border);
+}
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaEyebrow {
+  display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--b2b-accent);
+  margin-bottom: 10px;
+}
+
+.ctaTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.ctaDesc {
+  font-size: 15px;
+  color: var(--b2b-text-secondary);
+  margin: 0;
+}
+
+.ctaAction {
+  flex-shrink: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .featured {
+    grid-template-columns: 55% 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: -60px;
+    padding: 110px 0 0;
+  }
+
+  .featured {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredImg {
+    min-height: 260px;
+  }
+
+  .featuredContent {
+    border-left: 1px solid var(--b2b-border);
+    border-top: none;
+    padding: 28px 24px;
+  }
+
+  .secondaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .secondaryCard {
+    grid-template-columns: 40% 60%;
+  }
+
+  .secondaryImg {
+    min-height: 180px;
+  }
+
+  .resultadosGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .resultadoSep {
+    display: none;
+  }
+
+  .resultadoItem {
+    padding: 0;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 24px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: -40px;
+    padding: 120px 0 0;
+  }
+
+  .secondaryCard {
+    grid-template-columns: 1fr;
+  }
+
+  .secondaryImg {
+    min-height: 200px;
+    height: 200px;
+  }
+
+  .secondaryContent {
+    border-left: 1px solid var(--b2b-border);
+    border-top: none;
+  }
+
+  .cta {
+    padding: 28px 16px;
+  }
+
+  .ctaTitle {
+    font-size: 20px;
+  }
+
+  .cta :global(.btn-style-one) {
+    white-space: normal;
+    word-break: break-word;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

@@ -1,46 +1,73 @@
-# Leo Pessoa - Engenheiro Eletricista
+# React + TypeScript + Vite
 
-Site pessoal do Engenheiro Eletricista Leonardo Pessoa, especializado em projetos elétricos e automação residencial para arquitetos em João Pessoa - PB.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🎯 Objetivo
+Currently, two official plugins are available:
 
-Site one page focado em captar parcerias B2B com arquitetos e designers de interiores, oferecendo:
-- Projetos elétricos integrados
-- Automação residencial inteligente
-- Suporte técnico e comercial
-- Compatibilidade com BIM e AutoCAD
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🚀 Tecnologias
+## React Compiler
 
-- React Router 7
-- TypeScript
-- TailwindCSS
-- Vite
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📦 Instalação
+## Expanding the ESLint configuration
 
-```bash
-npm install
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-## 🔧 Desenvolvimento
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```bash
-npm run dev
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-Acesse: `http://localhost:5173`
-
-## 🏗️ Build
-
-```bash
-npm run build
-```
-
-## 🌐 Deploy
-
-Site será hospedado em: `https://leopessoa.eng.br`
-
----
-
-Desenvolvido para conectar arquitetos com soluções elétricas inteligentes.
