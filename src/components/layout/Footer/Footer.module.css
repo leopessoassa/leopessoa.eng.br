@@ -16,10 +16,10 @@
   padding: 0 20px;
 }
 
-/* Grid de 4 colunas */
+/* Grid de 3 colunas */
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1.5fr;
   gap: 48px;
 }
 

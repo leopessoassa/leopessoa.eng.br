@@ -72,8 +72,8 @@ export default function LetsBeginSection() {
           <div className={styles.infoCol}>
             <p className={styles.eyebrow}>Próximo passo</p>
             <h2 className={styles.headline}>
-              Café na praia para falar do{' '}
-              <span className={styles.headlineAccent}>próximo projeto</span>?
+              Seu próximo projeto{' '}
+              <span className={styles.headlineAccent}>merece uma conversa</span>.
             </h2>
             <div className={styles.headlineLine} aria-hidden="true" />
             <p className={styles.subheadline}>

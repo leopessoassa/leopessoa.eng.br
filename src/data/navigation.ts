@@ -1,18 +1,16 @@
 import type { NavItem } from '../types/navigation';
 
 export const navItems: NavItem[] = [
-  { label: 'O Que É Possível', href: '/#inspiracao' },
-  { label: 'Quem Sou Eu',      href: '/#sobre' },
-  { label: 'Como Funciona',    href: '/#como-funciona' },
-  { label: 'Projetos Reais',   href: '/#projetos' },
+  { label: 'O Especialista',        href: '/#sobre' },
+  { label: 'A Parceria',            href: '/#processo' },
+  { label: 'Projetos',              href: '/#cases' },
   {
-    label: 'Para Parceiros',
-    href: 'https://parceiros.leopessoa.eng.br',
+    label: 'Para Clientes',
+    href: 'https://casainteligente.leopessoa.eng.br',
     isExternal: true,
-    isPartner: true,
   },
   {
-    label: 'Fale Comigo',
+    label: 'Conversar →',
     href: '/#contato',
     isCta: true,
   },

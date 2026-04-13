@@ -3,21 +3,13 @@ import { whatsappBaseUrl, WHATSAPP_DISPLAY } from '@/utils/whatsapp';
 import styles from './Footer.module.css';
 
 const navLinks = [
-  { label: 'Para Arquitetos', href: '/#para-arquitetos' },
-  { label: 'Sobre Leo', href: '/#sobre' },
-  { label: 'Como Funciona', href: '/#processo' },
-  { label: 'Cases Reais', href: '/#cases' },
-  { label: 'Começar', href: '/#contato' },
+  { label: 'O Especialista', href: '/#sobre' },
+  { label: 'A Parceria',     href: '/#processo' },
+  { label: 'Projetos',       href: '/#cases' },
+  { label: 'Para Clientes',  href: 'https://casainteligente.leopessoa.eng.br' },
+  { label: 'Conversar',      href: '/#contato' },
 ];
 
-const servicos = [
-  'Iluminação inteligente',
-  'Climatização automatizada',
-  'Som ambiente',
-  'Persianas motorizadas',
-  'Segurança residencial',
-  'Projetos BIM/AutoCAD',
-];
 
 export default function Footer() {
   const whatsapp = whatsappBaseUrl();
@@ -56,19 +48,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Coluna 3 — Serviços */}
-            <div className={styles.colServicos}>
-              <p className={styles.colLabel}>Serviços</p>
-              <ul className={styles.linkList}>
-                {servicos.map((s) => (
-                  <li key={s}>
-                    <span className={styles.servicoItem}>{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Coluna 4 — Contato */}
+            {/* Coluna 3 — Contato */}
             <div className={styles.colContato}>
               <p className={styles.colLabel}>Contato</p>
               <ul className={styles.contatoList}>
