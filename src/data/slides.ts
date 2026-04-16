@@ -14,7 +14,7 @@ export interface SlideData {
 export const heroSlides: SlideData[] = [
   {
     id: 1,
-    image: '/images/equipamentos-eletricos-sobre-projeto-v5.webp',
+    image: '/images/main-slider/15.webp',
     title: 'Seus projetos merecem ser inesquecíveis',
     subtitle: 'Automação residencial que encanta clientes e diferencia sua marca.',
     copy: 'O parceiro técnico que transforma sua visão criativa em experiências extraordinárias. BIM & AutoCAD, MBA FGV, João Pessoa - PB.',
@@ -26,7 +26,7 @@ export const heroSlides: SlideData[] = [
   },
   {
     id: 2,
-    image: '/images/homem-sentado-e-mulher-em-pe-conversando-sobre-projeto-arquitetonico-na-mesa.webp',
+    image: '/images/main-slider/10.webp',
     title: 'Parceria estratégica para arquitetos',
     subtitle: 'Você lidera o design. Eu adiciono a expertise elétrica que faltava.',
     copy: 'Clientes que viram fãs da sua marca. ROI que convence na primeira reunião. Automação que ninguém mais oferece.',
@@ -38,7 +38,7 @@ export const heroSlides: SlideData[] = [
   },
   {
     id: 3,
-    image: '/images/equipamentos-eletricos-sobre-projeto-v6.webp',
+    image: '/images/main-slider/house-croqui.webp',
     title: 'Projetos que vendem por si mesmos',
     subtitle: 'Automação inteligente que impressiona desde a primeira apresentação.',
     copy: 'Integração total com seu workflow. Seus arquivos BIM/AutoCAD, nossa expertise. Apresentações que vendem sozinhas.',
@@ -50,7 +50,7 @@ export const heroSlides: SlideData[] = [
   },
   {
     id: 4,
-    image: '/images/aperto-de-mao-colaboracao.webp',
+    image: '/images/main-slider/6.webp',
     title: 'Tecnologia invisível, experiência memorável',
     subtitle: 'Cada detalhe pensado para criar momentos únicos em cada ambiente.',
     copy: 'Da iluminação circadiana ao som ambiente, da climatização às persianas. Tudo integrado, tudo elegante, tudo seu.',
