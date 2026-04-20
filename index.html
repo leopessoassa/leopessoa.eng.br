@@ -11,6 +11,8 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Leonardo Pessoa">
     <link rel="canonical" href="https://parceiros.leopessoa.eng.br/">
+    <meta name="geo.region" content="BR-PB">
+    <meta name="geo.placename" content="João Pessoa">
 
     <!-- ═══ Open Graph (WhatsApp, Facebook, LinkedIn) ════════════════════════ -->
     <meta property="og:type" content="website">
@@ -36,7 +38,7 @@
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://leopessoa.eng.br/#person",
+          "@id": "https://leopessoa.eng.br/#sobre",
           "name": "Leonardo Pessoa",
           "jobTitle": "Engenheiro Eletricista",
           "description": "Engenheiro Eletricista especialista em projetos elétricos BIM, automação residencial, iluminação cênica e SPDA. Parceiro técnico para arquitetos e designers de interiores em João Pessoa, PB.",
@@ -60,17 +62,18 @@
           ],
           "hasCredential": [
             { "@type": "EducationalOccupationalCredential", "name": "CREA-PB" },
-            { "@type": "EducationalOccupationalCredential", "name": "MBA FGV" }
+            { "@type": "EducationalOccupationalCredential", "name": "MBA FGV" },
+            { "@type": "EducationalOccupationalCredential", "name": "Mestrado UFPB" }
           ]
         },
         {
           "@type": ["ProfessionalService", "Electrician"],
-          "@id": "https://parceiros.leopessoa.eng.br/#business",
+          "@id": "https://parceiros.leopessoa.eng.br",
           "name": "Leo Pessoa · Parceiro Técnico para Arquitetos",
           "description": "Engenheiro Eletricista parceiro de arquitetos e designers de interiores em João Pessoa, PB. Projetos elétricos em BIM, automação residencial, iluminação cênica e SPDA.",
           "url": "https://parceiros.leopessoa.eng.br",
           "telephone": "+5583982078702",
-          "email": "leo@leopessoa.eng.br",
+          "email": "contato@leopessoa.eng.br",
           "image": "https://parceiros.leopessoa.eng.br/images/leonardo-pessoa.webp",
           "priceRange": "$$",
           "address": {
@@ -81,8 +84,8 @@
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": -7.1195,
-            "longitude": -34.8450
+            "latitude": -7.1253137,
+            "longitude": -34.853303
           },
           "areaServed": [
             { "@type": "City", "name": "João Pessoa" },
@@ -104,16 +107,26 @@
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parceria Técnica com Designers de Interiores" } }
             ]
           },
-          "founder": { "@id": "https://leopessoa.eng.br/#person" }
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          "founder": { "@id": "https://leopessoa.eng.br/#sobre" }
         },
         {
           "@type": "WebSite",
-          "@id": "https://parceiros.leopessoa.eng.br/#website",
+          "@id": "https://parceiros.leopessoa.eng.br",
           "url": "https://parceiros.leopessoa.eng.br",
           "name": "Leo Pessoa · Parceiro Técnico para Arquitetos",
           "description": "Site B2B de Leonardo Pessoa, Engenheiro Eletricista parceiro de arquitetos e designers de interiores em João Pessoa, PB.",
-          "publisher": { "@id": "https://leopessoa.eng.br/#person" },
+          "publisher": { "@id": "https://leopessoa.eng.br/#sobre" },
           "inLanguage": "pt-BR",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["title", "meta[name='description']"]
+          },
           "audience": {
             "@type": "Audience",
             "audienceType": "Arquitetos e Designers de Interiores"
