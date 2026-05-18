@@ -1,0 +1,275 @@
+/* ===== KeepinSection — fundo claro (#f4f4f2) ===== */
+
+.section {
+  background: #f4f4f2;
+  padding: 100px 0;
+  border-top: 1px solid #e8e6e2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── Header ── */
+.header {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--b2b-accent, #d4a843);
+  margin: 0 0 12px;
+}
+
+.title {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: #1c1c1e;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.titleLine {
+  width: 40px;
+  height: 2px;
+  background: var(--b2b-accent, #d4a843);
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Grid ── */
+.grid {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* Imagem / Logo */
+.imageCol {
+  flex: 0 0 280px;
+  text-align: center;
+}
+
+.imageWrap {
+  background: #fff;
+  border-radius: 2px;
+  padding: 40px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+.imageCaption {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 16px 0 0;
+  line-height: 1.5;
+}
+
+/* ── Benefícios ── */
+.beneficiosCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.beneficioList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.beneficioItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e0ddd8;
+}
+
+.beneficioItem:first-child {
+  padding-top: 0;
+}
+
+.beneficioItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.num {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--b2b-accent, #d4a843);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 40px;
+  letter-spacing: -1px;
+  opacity: 0.7;
+}
+
+.beneficioTitle {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+}
+
+.beneficioDesc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Footer / CTAs ── */
+.footer {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #e0ddd8;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.ctaPrimary {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--b2b-bg-deep, #0b1f2a);
+  background: var(--b2b-accent, #d4a843);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ctaPrimary:hover {
+  background: var(--b2b-accent-dark, #b8902e);
+  transform: translateY(-1px);
+}
+
+.ctaPrimary:active {
+  transform: translateY(0);
+}
+
+.ctaSecondary {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.ctaSecondary:hover {
+  color: #555;
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 991px) {
+  .grid {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .imageCol {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .grid {
+    gap: 40px;
+  }
+
+  .imageCol {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .imageWrap {
+    padding: 32px 24px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .ctaPrimary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .ctaPrimary {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+}

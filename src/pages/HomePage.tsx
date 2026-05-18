@@ -2,6 +2,8 @@ import HeroSlider from '@/components/sections/HeroSlider/HeroSlider';
 import InspirationSection from '@/components/sections/InspirationSection/InspirationSection';
 import AboutSection from '@/components/sections/AboutSection/AboutSection';
 import HowItWorksSection from '@/components/sections/HowItWorksSection/HowItWorksSection';
+import KeepinSection from '@/components/sections/KeepinSection/KeepinSection';
+import CtaBridgeSection from '@/components/sections/CtaBridgeSection/CtaBridgeSection';
 import GettingStartedSection from '@/components/sections/GettingStartedSection/GettingStartedSection';
 import ProjectsSection from '@/components/sections/ProjectsSection/ProjectsSection';
 import LetsBeginSection from '@/components/sections/LetsBeginSection/LetsBeginSection';
@@ -16,6 +18,8 @@ export default function HomePage() {
       <AboutSection />
       <HowItWorksSection />
       <ProjectsSection />
+      <KeepinSection />
+      <CtaBridgeSection />
       <GettingStartedSection />
       <LetsBeginSection />
       <ProofBar />
