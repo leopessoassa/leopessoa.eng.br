@@ -2,7 +2,8 @@
 .section {
   position: relative;
   margin-top: -75px;
-  padding: 180px 0 0;
+  /* padding-bottom garante que o triângulo inferior (120px) fique abaixo do conteúdo */
+  padding: 180px 0 160px;
   z-index: 3;
 }
 
@@ -373,7 +374,7 @@
 @media (max-width: 768px) {
   .section {
     margin-top: -60px;
-    padding: 110px 0 0;
+    padding: 110px 0 120px; /* botão vira coluna → precisa de mais espaço abaixo do triângulo */
   }
 
   .featured {
@@ -426,7 +427,7 @@
 @media (max-width: 480px) {
   .section {
     margin-top: -40px;
-    padding: 120px 0 0;
+    padding: 120px 0 140px; /* botão ocupa largura total e 3 linhas → padding-bottom generoso */
   }
 
   .secondaryCard {
@@ -451,11 +452,18 @@
     font-size: 20px;
   }
 
+  .ctaAction {
+    width: 100%;
+  }
+
   .cta :global(.btn-style-one) {
     white-space: normal;
     word-break: break-word;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

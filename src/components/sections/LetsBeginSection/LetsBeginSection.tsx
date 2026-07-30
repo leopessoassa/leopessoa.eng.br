@@ -3,6 +3,11 @@ import { useForm } from 'react-hook-form';
 import type { ContactFormData, FormStatus } from '@/types/form';
 import styles from './LetsBeginSection.module.css';
 import { whatsappUrl, whatsappBaseUrl } from '@/utils/whatsapp';
+import emailjs from '@emailjs/browser';
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const EMAILJS_SITE = import.meta.env.VITE_EMAILJS_SITE as string;
 
 const esperaItems = [
   'Resposta rápida (até 2h no horário comercial)',
@@ -42,8 +47,14 @@ export default function LetsBeginSection() {
   async function handleFormSubmit(data: ContactFormData) {
     setStatus('submitting');
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      console.log('Form data:', data);
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        site: EMAILJS_SITE,
+        name: data.name,
+        email: data.email,
+        cel: '-',
+        projectType: '-',
+        message: data.message,
+      });
       setStatus('success');
       reset();
     } catch {

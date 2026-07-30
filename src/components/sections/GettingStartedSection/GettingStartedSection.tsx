@@ -189,8 +189,11 @@ export default function GettingStartedSection() {
           Simples assim. Você continua sendo o protagonista do projeto.
         </p>
 
-        {/* ── FAQ ── */}
-        <div className={styles.faqSection}>
+      </div>
+
+      {/* ── FAQ — fora do container para ocupar 100% da largura ── */}
+      <div className={styles.faqSection}>
+        <div className={styles.faqInner}>
           <p className={styles.faqEyebrow}>Dúvidas frequentes</p>
           <ul className={styles.faqList}>
             {faqItems.map((item) => (
@@ -215,7 +218,6 @@ export default function GettingStartedSection() {
             ))}
           </ul>
         </div>
-
       </div>
     </section>
   );
