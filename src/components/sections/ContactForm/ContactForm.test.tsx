@@ -3,13 +3,15 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import * as fc from 'fast-check';
 import ContactForm from './ContactForm';
 
+// O botão de submit tem aria-label="Enviar mensagem" no componente
+const SUBMIT_LABEL = /Enviar mensagem/i;
+
 describe('ContactForm', () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });
 
-  // Feature: react-site-conversion, Property 7: ContactForm rejeita entradas inválidas
-  // Validates: Requirements 9.2, 9.4
+  // Property 7: ContactForm rejeita entradas inválidas
   it('Property 7: rejects invalid submissions and shows error alerts', async () => {
     await fc.assert(
       fc.asyncProperty(
@@ -21,21 +23,18 @@ describe('ContactForm', () => {
           ),
           message: fc.string(),
         }),
-        async (_invalidData) => {
+        async () => {
           const onSubmit = vi.fn();
           const { getByRole, getAllByRole, unmount } = render(
             <ContactForm onSubmit={onSubmit} />
           );
 
-          // Click submit without filling valid data
           await act(async () => {
-            fireEvent.click(getByRole('button', { name: /send/i }));
+            fireEvent.click(getByRole('button', { name: SUBMIT_LABEL }));
           });
 
-          // onSubmit should NOT have been called
           expect(onSubmit).not.toHaveBeenCalled();
 
-          // At least one alert (error) should be visible
           const alerts = getAllByRole('alert');
           expect(alerts.length).toBeGreaterThan(0);
 
@@ -46,8 +45,7 @@ describe('ContactForm', () => {
     );
   });
 
-  // Feature: react-site-conversion, Property 8: ContactForm exibe sucesso para entradas válidas
-  // Validates: Requirements 9.3
+  // Property 8: ContactForm exibe sucesso para entradas válidas
   it('Property 8: shows success message for valid submissions', async () => {
     await fc.assert(
       fc.asyncProperty(
@@ -63,16 +61,16 @@ describe('ContactForm', () => {
           );
 
           await act(async () => {
-            fireEvent.change(getByLabelText(/name/i), {
+            fireEvent.change(getByLabelText(/Name/i), {
               target: { value: validData.name },
             });
-            fireEvent.change(getByLabelText(/email/i), {
+            fireEvent.change(getByLabelText(/Email/i), {
               target: { value: validData.email },
             });
-            fireEvent.change(getByLabelText(/message/i), {
+            fireEvent.change(getByLabelText(/Message/i), {
               target: { value: validData.message },
             });
-            fireEvent.click(getByRole('button', { name: /send/i }));
+            fireEvent.click(getByRole('button', { name: SUBMIT_LABEL }));
           });
 
           await waitFor(() => {
@@ -89,20 +87,21 @@ describe('ContactForm', () => {
   describe('Unit tests', () => {
     it('renders Name, Email and Message fields', () => {
       render(<ContactForm />);
-      expect(screen.getByLabelText(/name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
+      // usar aria-label explícito definido no componente
+      expect(screen.getByLabelText('Name')).toBeInTheDocument();
+      expect(screen.getByLabelText('Email')).toBeInTheDocument();
+      expect(screen.getByLabelText('Message')).toBeInTheDocument();
     });
 
-    it('renders a Send button', () => {
+    it('renders the submit button', () => {
       render(<ContactForm />);
-      expect(screen.getByRole('button', { name: /send/i })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: SUBMIT_LABEL })).toBeInTheDocument();
     });
 
     it('shows inline validation errors when submitting empty form', async () => {
       render(<ContactForm />);
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
       const alerts = screen.getAllByRole('alert');
       expect(alerts.length).toBeGreaterThan(0);
@@ -111,7 +110,7 @@ describe('ContactForm', () => {
     it('shows name required error when name is empty', async () => {
       render(<ContactForm />);
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
       expect(screen.getByText(/nome é obrigatório/i)).toBeInTheDocument();
     });
@@ -119,21 +118,21 @@ describe('ContactForm', () => {
     it('shows email required error when email is empty', async () => {
       render(<ContactForm />);
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
       expect(screen.getByText(/email é obrigatório/i)).toBeInTheDocument();
     });
 
     it('shows email format error for invalid email', async () => {
       render(<ContactForm />);
-      fireEvent.change(screen.getByLabelText(/name/i), {
-        target: { value: 'John' },
+      fireEvent.change(screen.getByLabelText('Name'), {
+        target: { value: 'João' },
       });
-      fireEvent.change(screen.getByLabelText(/email/i), {
-        target: { value: 'not-an-email' },
+      fireEvent.change(screen.getByLabelText('Email'), {
+        target: { value: 'nao-e-email' },
       });
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
       expect(screen.getByText(/formato de email inválido/i)).toBeInTheDocument();
     });
@@ -146,22 +145,22 @@ describe('ContactForm', () => {
 
       render(<ContactForm onSubmit={onSubmit} />);
 
-      fireEvent.change(screen.getByLabelText(/name/i), {
-        target: { value: 'John' },
+      fireEvent.change(screen.getByLabelText('Name'), {
+        target: { value: 'João' },
       });
-      fireEvent.change(screen.getByLabelText(/email/i), {
-        target: { value: 'john@example.com' },
+      fireEvent.change(screen.getByLabelText('Email'), {
+        target: { value: 'joao@exemplo.com' },
       });
-      fireEvent.change(screen.getByLabelText(/message/i), {
-        target: { value: 'Hello' },
+      fireEvent.change(screen.getByLabelText('Message'), {
+        target: { value: 'Olá' },
       });
 
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
 
-      // The button keeps aria-label="Send" but is disabled during submission
-      expect(screen.getByRole('button', { name: /send/i })).toBeDisabled();
+      // aria-label permanece "Enviar mensagem" mas o botão fica disabled durante o submit
+      expect(screen.getByRole('button', { name: SUBMIT_LABEL })).toBeDisabled();
 
       await act(async () => {
         resolveSubmit();
@@ -172,18 +171,18 @@ describe('ContactForm', () => {
       const onSubmit = vi.fn().mockRejectedValue(new Error('Network error'));
       render(<ContactForm onSubmit={onSubmit} />);
 
-      fireEvent.change(screen.getByLabelText(/name/i), {
-        target: { value: 'John' },
+      fireEvent.change(screen.getByLabelText('Name'), {
+        target: { value: 'João' },
       });
-      fireEvent.change(screen.getByLabelText(/email/i), {
-        target: { value: 'john@example.com' },
+      fireEvent.change(screen.getByLabelText('Email'), {
+        target: { value: 'joao@exemplo.com' },
       });
-      fireEvent.change(screen.getByLabelText(/message/i), {
-        target: { value: 'Hello' },
+      fireEvent.change(screen.getByLabelText('Message'), {
+        target: { value: 'Olá' },
       });
 
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
 
       await waitFor(() => {
@@ -197,18 +196,18 @@ describe('ContactForm', () => {
       const onSubmit = vi.fn().mockResolvedValue(undefined);
       render(<ContactForm onSubmit={onSubmit} />);
 
-      fireEvent.change(screen.getByLabelText(/name/i), {
-        target: { value: 'John' },
+      fireEvent.change(screen.getByLabelText('Name'), {
+        target: { value: 'João' },
       });
-      fireEvent.change(screen.getByLabelText(/email/i), {
-        target: { value: 'john@example.com' },
+      fireEvent.change(screen.getByLabelText('Email'), {
+        target: { value: 'joao@exemplo.com' },
       });
-      fireEvent.change(screen.getByLabelText(/message/i), {
-        target: { value: 'Hello' },
+      fireEvent.change(screen.getByLabelText('Message'), {
+        target: { value: 'Olá' },
       });
 
       await act(async () => {
-        fireEvent.click(screen.getByRole('button', { name: /send/i }));
+        fireEvent.click(screen.getByRole('button', { name: SUBMIT_LABEL }));
       });
 
       await waitFor(() => {

@@ -1,9 +1,22 @@
-// Feature: react-site-conversion, Property 10: Elementos interativos têm labels acessíveis
-// Validates: Requirements 13.3
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
 import HeroSlider from './HeroSlider';
 import type { SlideData } from '@/data/slides';
+
+// Mock Swiper — jsdom não suporta as APIs de DOM internas do Swiper
+vi.mock('swiper/react', () => ({
+  Swiper: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="hero-swiper">{children}</div>
+  ),
+  SwiperSlide: ({ children }: { children: React.ReactNode }) => (
+    <div className="swiper-slide">{children}</div>
+  ),
+}));
+
+vi.mock('swiper/modules', () => ({ Autoplay: {}, Navigation: {}, Pagination: {} }));
+vi.mock('swiper/css', () => ({}));
+vi.mock('swiper/css/navigation', () => ({}));
+vi.mock('swiper/css/pagination', () => ({}));
 
 const mockSlides: SlideData[] = [
   {
@@ -24,7 +37,7 @@ const mockSlides: SlideData[] = [
   },
 ];
 
-describe('HeroSlider - Property 10: icon-only nav buttons have aria-label', () => {
+describe('HeroSlider — acessibilidade dos botões de navegação', () => {
   it('prev and next navigation buttons have aria-label', () => {
     const { container } = render(<HeroSlider slides={mockSlides} />);
     const buttons = container.querySelectorAll('button');
@@ -34,17 +47,27 @@ describe('HeroSlider - Property 10: icon-only nav buttons have aria-label', () =
     });
   });
 
-  it('prev button has aria-label', () => {
+  it('prev button has aria-label "Slide anterior"', () => {
     const { container } = render(<HeroSlider slides={mockSlides} />);
     const prevBtn = container.querySelector('button[aria-label="Slide anterior"]');
     expect(prevBtn).toBeInTheDocument();
-    expect(prevBtn).toHaveAttribute('aria-label', 'Slide anterior');
   });
 
-  it('next button has aria-label', () => {
+  it('next button has aria-label "Próximo slide"', () => {
     const { container } = render(<HeroSlider slides={mockSlides} />);
     const nextBtn = container.querySelector('button[aria-label="Próximo slide"]');
     expect(nextBtn).toBeInTheDocument();
-    expect(nextBtn).toHaveAttribute('aria-label', 'Próximo slide');
+  });
+
+  it('renders 2 slides', () => {
+    const { container } = render(<HeroSlider slides={mockSlides} />);
+    const slides = container.querySelectorAll('.swiper-slide');
+    expect(slides.length).toBe(mockSlides.length);
+  });
+
+  it('renders CTA links for each slide', () => {
+    const { getAllByRole } = render(<HeroSlider slides={mockSlides} />);
+    const ctaLinks = getAllByRole('link');
+    expect(ctaLinks.length).toBeGreaterThanOrEqual(mockSlides.length);
   });
 });

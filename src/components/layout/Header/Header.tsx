@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { useStickyHeader } from '../../../hooks/useStickyHeader';
 import { navItems } from '../../../data/navigation';
 import styles from './Header.module.css';

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://parceiros.leopessoa.eng.br/sitemap.xml
+
+# Bloquear recursos desnecessários para crawlers
+Disallow: /fonts/

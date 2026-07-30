@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import * as fc from 'fast-check';
 import PortfolioCarousel from './PortfolioCarousel';
 import type { PortfolioItem } from '@/types/portfolio';
 
-// Mock Swiper — jsdom doesn't support Swiper's DOM APIs
+// Mock Swiper — jsdom não suporta as APIs de DOM internas do Swiper
 vi.mock('swiper/react', () => ({
   Swiper: ({
     children,
@@ -12,13 +12,12 @@ vi.mock('swiper/react', () => ({
     pagination,
   }: {
     children: React.ReactNode;
-    autoplay?: { delay: number };
-    pagination?: { clickable: boolean };
-    [key: string]: unknown;
+    autoplay?: { delay?: number };
+    pagination?: { clickable?: boolean };
   }) => (
     <div
       data-testid="swiper"
-      data-autoplay-delay={autoplay?.delay}
+      data-autoplay-delay={autoplay?.delay !== undefined ? String(autoplay.delay) : undefined}
       data-pagination={pagination?.clickable ? 'true' : undefined}
     >
       {children}
@@ -29,11 +28,7 @@ vi.mock('swiper/react', () => ({
   ),
 }));
 
-vi.mock('swiper/modules', () => ({
-  Autoplay: {},
-  Pagination: {},
-}));
-
+vi.mock('swiper/modules', () => ({ Autoplay: {}, Pagination: {} }));
 vi.mock('swiper/css', () => ({}));
 vi.mock('swiper/css/pagination', () => ({}));
 
@@ -70,11 +65,7 @@ const sampleItems: PortfolioItem[] = [
 ];
 
 describe('PortfolioCarousel', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
-  // Feature: react-site-conversion, Property 6: PortfolioCarousel renderiza todos os campos de cada item
+  // Property 6: PortfolioCarousel renderiza todos os campos de cada item
   it('Property 6: renders title and category for every item in the array', () => {
     const nonEmptyVisibleString = fc
       .string({ minLength: 1 })
@@ -94,12 +85,12 @@ describe('PortfolioCarousel', () => {
         ),
         (items) => {
           const { container, unmount } = render(<PortfolioCarousel items={items} />);
-          // Verify each item's title and category appear in the rendered output
+          // Títulos ficam em h4 > a, categorias em [class*="cat"] > a
+          const titleEls = container.querySelectorAll('h4');
+          const catEls = container.querySelectorAll('[class*="cat"]');
+          const titleTexts = Array.from(titleEls).map((el) => el.textContent?.trim());
+          const categoryTexts = Array.from(catEls).map((el) => el.textContent?.trim());
           items.forEach((item) => {
-            const titleEls = container.querySelectorAll('h3');
-            const categoryEls = container.querySelectorAll('span');
-            const titleTexts = Array.from(titleEls).map((el) => el.textContent?.trim());
-            const categoryTexts = Array.from(categoryEls).map((el) => el.textContent?.trim());
             expect(titleTexts).toContain(item.title.trim());
             expect(categoryTexts).toContain(item.category.trim());
           });
